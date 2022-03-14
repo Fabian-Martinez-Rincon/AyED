@@ -101,3 +101,29 @@ public static int binarySearch(int[] a, int key)
 | 4000     | 4000       | ~12      |
 | 8000     | 8000       | ~13      |
 | 16000     | 16000       | ~14     |
+|      | Hace N operaciones       | Hace log(N) operaciones     |
+
+[Log sub 2 online](https://miniwebtool.com/es/log-base-2-calculator/#:~:text=La%20base%20logar%C3%ADtmica%202%2C%20tambi%C3%A9n,binario%20de%204%20es%202.)
+
+## [¿Como medir el tiempo?]()
+
+- En forma empírica (Se realiza a posteriori)
+- En forma teórica (Se realiza a priori) 
+
+### Análisis empírico
+
+Correr el programa para varios tamaños de la entrada y medir el tiempo. Suponemos que cada comparación tarda 1 seg
+
+|  | Busqueda Secuencial | Busqueda Binaria |
+| :---         |     :---:      |          ---: |
+|    N      |     Tiempo(seg)      |          Tiempo(seg) |
+| 1000         |     1000      |          ~10 |
+| 2000   | 2000    | ~11    |
+| 4000     | 4000 ~1 hs       | ~12      |
+| 8000     | 8000 ~2 hs       | ~13      |
+| 16000     | 16000 ~4 hs   | ~14     |
+
+### Analisis de Algoritmos
+
+![image (2)](https://user-images.githubusercontent.com/55964635/158115649-3f0713d4-caa8-4591-b833-e8b1d5ccc1e8.png)
+
