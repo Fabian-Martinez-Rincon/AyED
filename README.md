@@ -11,3 +11,5 @@
 - [Parciales Objetos](/Documentos/ParcialesObjetos.md)
 
 ## [Indice de Ayed](indice)
+
+- [Teoria](/Documentos/teriaNueva.md)
