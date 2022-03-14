@@ -12,4 +12,4 @@
 
 ## [Indice de Ayed](indice)
 
-- [Teoria](/Documentos/teriaNueva.md)
+- [Teoria](/Documentos/TeoriaNueva.md)
