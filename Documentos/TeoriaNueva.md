@@ -64,4 +64,31 @@ public static int seqSearch(int[] a, int key)
   return index;
 }
 ```
+¿Cuantas comparaciones hace?
 
+Si esta ***ordenado*** se usa una ```Busqueda binaria``` 
+
+Comparo la clave con la entrada del centro
+
+- Si es menor, voy hacia la izquierda
+- Si es mayor, voy hacia la derecha
+- Si es igual, la encontré
+
+![image (1)](https://user-images.githubusercontent.com/55964635/158111409-3f002c61-9261-454d-ba76-d2f8fd1d0ca6.png)
+
+
+```Java
+public static int binarySearch(int[] a, int key)
+{
+  int lo = 0, hi = a.length-1;
+  while (lo <= hi)
+   {
+    int mid = lo + (hi - lo) / 2;
+    if (key < a[mid]) hi = mid - 1;
+    else if (key > a[mid]) lo = mid + 1;
+    else return mid;
+   }
+  return -1;
+}
+```
+¿Cuantas comparaciones hace?
