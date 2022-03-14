@@ -1,4 +1,6 @@
-<h1 align="center">Teoria</h1>
+<h1 align="center">Teoria 1</h1>
+
+
 
 ## [Objetivos de la materia]()
 
@@ -158,3 +160,5 @@ Suma del ***costo x frecuencia*** de todas las operaciones
 ```Costo``` depende de la máquina, del compilador, del lenguaje
 
 ```Frecuencia``` depende del algoritmo y de la entrada
+
+<h1 align="center">Teoria 2</h1>
