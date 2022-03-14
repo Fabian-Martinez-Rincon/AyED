@@ -127,3 +127,34 @@ Correr el programa para varios tamaños de la entrada y medir el tiempo. Suponem
 
 ![image (2)](https://user-images.githubusercontent.com/55964635/158115649-3f0713d4-caa8-4591-b833-e8b1d5ccc1e8.png)
 
+## [Buscar un elemento en una lista dinámica]()
+
+Si los elementos están almacenados en una lista dinámica
+
+La lista puede estar:
+- Desordenada
+- Ordenada
+
+![image (3)](https://user-images.githubusercontent.com/55964635/158118424-9ba89679-d6de-4dec-a028-0fe2c9088dcc.png)
+
+## [Análisis de Algoritmos]()
+
+Marco para predecir la performance y comparar algoritmos
+
+Desafio:
+
+Escribir programas que puedan resolver en forma eficiente problemas con una gran entrada de los datos
+
+![image (4)](https://user-images.githubusercontent.com/55964635/158118790-e56875b9-a5f5-46db-a0a8-803fbe56f2e1.png)
+
+Existe un modelo matemático para medir el tiempo
+
+Tiempo total:
+
+Suma del ***costo x frecuencia*** de todas las operaciones
+
+- Es necesario analizar el algoritmo para determinar el conjunto de operaciones
+
+```Costo``` depende de la máquina, del compilador, del lenguaje
+
+```Frecuencia``` depende del algoritmo y de la entrada
