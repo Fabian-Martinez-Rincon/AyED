@@ -92,3 +92,12 @@ public static int binarySearch(int[] a, int key)
 }
 ```
 ¿Cuantas comparaciones hace?
+
+|  | Busqueda Secuencial | Busqueda Binaria |
+| :---         |     :---:      |          ---: |
+|    N      |     Cantidad de operaciones      |          Cantidad de operaciones |
+| 1000         |     1000      |          ~10 |
+| 2000   | 2000    | ~11    |
+| 4000     | 4000       | ~12      |
+| 8000     | 8000       | ~13      |
+| 16000     | 16000       | ~14     |
