@@ -1,6 +1,6 @@
 <h1 align="center"> 💻Algoritmos y Estructuras de Datos </h1>
 
-## [Indice de Taller](indice)
+## Indice de Taller
 
 - [Java (Teoria) ☕](/Documentos/Java.md)
 - [Java (Codigos)](/Documentos/Java2.md)
@@ -10,6 +10,6 @@
   - [Practica de Repaso ](/Documentos/Java_Practica4.md)
 - [Parciales Objetos](/Documentos/ParcialesObjetos.md)
 
-## [Indice de Ayed](indice)
+## Indice de Ayed
 
 - [Teoria](/Documentos/TeoriaNueva.md)
