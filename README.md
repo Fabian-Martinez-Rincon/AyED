@@ -13,3 +13,4 @@
 ## Indice de Ayed
 
 - [Teoria](/Documentos/TeoriaNueva.md)
+- [Practica 1](/Documentos/Practica1.md)
