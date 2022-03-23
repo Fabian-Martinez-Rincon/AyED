@@ -4,19 +4,19 @@ public class cinco {
     public static int[] incisoA(int[] arreglo) {
         
         int[] array = new int[3];
-        array[0] = -1;
-        array[1] = 9999;
+        array[0] = -1; //Para calcular Maximo
+        array[1] = 9999;    //Para calcular minimo
         array[2] = 0;
         for (int i = 0; i < arreglo.length; i++) {
             if(arreglo[i]>array[0]){
-                array[0] = arreglo[i];  //Calculo el minimo en array[0]
+                array[0] = arreglo[i];  //Calculo el maximo en array[0]
             }
             if(arreglo[i]<array[1]){
-                array[1] =  arreglo[i]; //Calculo el maximo en arra[1]
+                array[1] =  arreglo[i]; //Calculo el minimo en arra[1]
             }
             array[2]=array[2]+arreglo[i];   //Calculo el total en array[2]
         }
-        array[2]=array[2]/arreglo.length;
+        array[2]=array[2]/arreglo.length;//Total/cantidad de elementos
         return array;
     }
     public static void MetodoB(IncisoB objetoB, int[] arreglo) {
