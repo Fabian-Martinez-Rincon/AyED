@@ -1,3 +1,43 @@
+<h1 align="center">☕Practica N°1 </h1>
+
+#### **Nota: Crea un proyecto llamado ```Practica1B``` para guardar todas las clases que implementes en esta práctica. Se recomienda crear un paquete por cada ejercicio.**
+
+```1)``` Escriba tres **métodos de clase (static)** que reciban por parámetro dos números enteros (tipo **int**) a y b e impriman todos los números enteros comprendidos entre a;b (inclusive), uno por cada línea en la salida estándar. Para ello, dentro de una nueva clase escriba un método por cada uno de los siguientes incisos:
+
+- ``a)`` Que realice lo pedido por un **for**.
+- ``b)`` Que realice lo pedido por un **while**.
+- ``c)`` Que realice lo pedido **sin utilizar estructuras de control iterativas** (for, while, do while).
+
+Por último, escriba en el método de clase **main** el llamado a cada uno de los métodos creados, con valores de ejemplo.
+
+En su computadora, **ejecute el programa** y verifique que se cumple con todo lo pedido.
+
+```2)``` Escriba un método de clase que dado un número **n** devuelva un nuevo arreglo de tamaño **n** primeros múltiplos enteros de **n** mayores o iguales que 1.
+
+- ``Ejemplo: f(5) = [5, 10, 15, 20, 25] ; f(k) = {nk/k: 1..k}``
+
+Agregue al programa la posibilidad de probar con distintos valores de **n** ingresándolos por teclado, mediante el uso de System.in. La clase **Scanner** permite leer de forma sencilla valores de entrada.
+
+**Ayuda:** Como ejemplo de uso, para contar la cantidada de números leídos hasta el primer 42 se puede hacer:
+
+```Java
+import java.util.Scanner;
+public class Contador {
+    public static int contar42 ( ) {
+        Scanner s = new Scanner(System.in) ;
+        int cantidad = 1 ;
+        while (s.nextInt() != 42) {
+            cantidad++;
+        }
+        return cantidad;
+    }
+}
+```
+
+```3)``` Creación de instancias mediante el uso del operador new
+
+```a)``` Cree una clase llamada **Estudiante** con los atributos especificados abajo y sus correspondientes métodos getters y setters (haga uso de las facilidades que brinda eclipse)
+
 Ejercicio_1
 ===========
 ```Java
