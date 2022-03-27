@@ -19,7 +19,7 @@ esVacia(): //Retorna true si la lista está vacía, false en caso contrario.
 tamanio(): //Retorna la cantidad de elementos.
 ```
 
-![](/Documentos/img/1.png)
+![](/Documentos/img/1_1.png)
 
 ```1.1)``` Importe en Eclipse  **ListasDe Enteros.zip** dado por la cátedra usando la opción Import > Existing Proyects into Workspace, y luego click en ``Select archive file`` y seleccione al archivo .zip descargado. Para poder usar las listas de enteros y sus operaciones, en cada una de las declaraciones de clases se debe agregar **import tp02.ejercicio1.***;
 
