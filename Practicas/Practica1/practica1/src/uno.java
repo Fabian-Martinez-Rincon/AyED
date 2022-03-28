@@ -4,6 +4,7 @@ public class uno {
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in) ;
         System.out.print("Ingrese un nro: ");
+        System.out.println();
         int a = escaner.nextInt();
 
         System.out.print("Ingrese otro nro: ");
