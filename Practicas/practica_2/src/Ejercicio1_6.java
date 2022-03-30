@@ -35,7 +35,6 @@ public class Ejercicio1_6 {
         }
         
     }
-    
 }
 
 /*

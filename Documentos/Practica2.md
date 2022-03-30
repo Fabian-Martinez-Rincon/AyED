@@ -24,15 +24,15 @@ tamanio(): //Retorna la cantidad de elementos.
 
 ```1.1)``` Importe en Eclipse  **ListasDe Enteros.zip** dado por la cátedra usando la opción Import > Existing Proyects into Workspace, y luego click en ``Select archive file`` y seleccione al archivo .zip descargado. Para poder usar las listas de enteros y sus operaciones, en cada una de las declaraciones de clases se debe agregar **import tp02.ejercicio1.***;
 
-```1.2)``` Escriba una clase llamada **TestListaDeEnterosConArreglos** que reciba en su método **main** una secuencia de números, los agregue a un objeto de tipo **ListaDeEnterosConArreglos** y luego imprima los elementos de dicha lista.
+```1.2)``` Escriba una clase llamada **TestListaDeEnterosConArreglos** que reciba en su método **main** una secuencia de números, los agregue a un objeto de tipo **ListaDeEnterosConArreglos** y luego imprima los elementos de dicha lista. [Resolución](#Ejercicio_1.2)
 
-```1.3)``` Escriba una clase llamada **TestListaDeEnterosEnlazada** que reciba en su método **main** una secuencia de números, los agregue a un objeto de tipo **ListaDeEnterosEnlazada** y luego imprima los elementos de dicha lista.
+```1.3)``` Escriba una clase llamada **TestListaDeEnterosEnlazada** que reciba en su método **main** una secuencia de números, los agregue a un objeto de tipo **ListaDeEnterosEnlazada** y luego imprima los elementos de dicha lista. [Resolución](#Ejercicio_1.3)
 
-```1.4)``` ¿Qué diferencia encuentra entre las implementaciones de los puntos anteriores?
+```1.4)``` ¿Qué diferencia encuentra entre las implementaciones de los puntos anteriores? [Resolución](#Ejercicio_1.4)
 
-```1.5)``` Escriba un método recursivo que imprima los elementos de una lista en sentido inverso. La lista la recibe por parámetro.
+```1.5)``` Escriba un método recursivo que imprima los elementos de una lista en sentido inverso. La lista la recibe por parámetro. [Resolución](#Ejercicio_1.5)
 
-```1.6)``` se aplica la siguiente función de forma recursiva a partir de un número n positivo se obtiene un sucesión que termina en 1:  
+```1.6)``` Se aplica la siguiente función de forma recursiva a partir de un número n positivo se obtiene un sucesión que termina en 1:  [Resolución](#Ejercicio_1.6)
 
 <div align="center"> 
 <img src="./img/2.png"/>
@@ -153,11 +153,149 @@ Donde ambos T y U son strings balanceados. Por ejemplo, "{( ) [ ( ) ] }" está b
 
 - ```b)``` Implemente una clase llamada **tp02.ejercicio4.TestBalanceo** (pase por máquina), cuyo objetivo es determinar si un String dado está balanceado. El String a verificar es un parámetro de entrada (no es un dato predefinido).
 
-Ejercicio_1
-===========
+Ejercicio_1.2
+=============
+```Java
+import tp02.ejercicio1.*;
+import java.util.Scanner;
 
-Ejercicio_2
-===========
+public class TestListaDeEnterosConArreglos {
+    public static void main(String[] args) {
+        //Creo la lista estatica
+        ListaDeEnterosConArreglos L = new ListaDeEnterosConArreglos();
+        //Llamo a la consola para ller desde teclado
+        Scanner consola = new Scanner(System.in);   
+        
+        //Cargo los numeros en la objeto
+        System.out.println("Ingrese un numero: ");
+        int numero = consola.nextInt();
+        while(numero != -1){
+            L.agregarFinal(numero);
+            System.out.println("Ingrese un numero: ");
+            numero = consola.nextInt();
+        }
+
+        //Imprimo la lista
+        L.comenzar();
+        while(!L.fin()){
+            System.out.println(L.proximo());
+        }
+        consola.close();
+    }
+}
+```
+Ejercicio_1.3
+=============
+```Java
+import tp02.ejercicio1.*;
+import java.util.Scanner;
+public class TestListaDeEnterosEnlazada {
+    public static void main(String[] args) {
+        //Creo la lista estatica
+        ListaDeEnterosEnlazada L = new ListaDeEnterosEnlazada();
+        
+        //Llamo a la consola para ller desde teclado
+        Scanner consola = new Scanner(System.in);   
+                
+        //Cargo los numeros en la objeto
+        System.out.println("Ingrese un numero: ");
+        int numero = consola.nextInt();
+        while(numero != -1){
+            L.agregarFinal(numero);
+            System.out.println("Ingrese un numero: ");
+            numero = consola.nextInt();
+        }
+        //Imprimo la lista
+        L.comenzar();
+        while(!L.fin()){
+            System.out.println(L.proximo());
+        }
+        consola.close();
+    }
+}
+```
+Ejercicio_1.4
+=============
+
+La implementación de ambas clases es la misma, ya que las dos apuntan a lista de enteros.
+
+Ejercicio_1.5
+=============
+```Java
+import tp02.ejercicio1.*;
+public class Ejercicio1_5 {
+    //__________________________________________________
+    public static void imprimirInverso(ListaDeEnteros l, int numero) {
+        if (numero>0) {
+            System.out.print(l.elemento(numero));
+            numero--;
+            imprimirInverso(l, numero);
+        }
+    }
+    //__________________________________________________
+    public static void main(String[] args) {
+        ListaDeEnterosConArreglos L = new ListaDeEnterosConArreglos();
+        L.agregarFinal(1);
+        L.agregarFinal(3);
+        L.agregarFinal(6);
+        imprimirInverso(L,L.tamanio());
+    }
+}
+```
+
+Ejercicio_1.6
+=============
+```Java
+import tp02.ejercicio1.*;
+public class Ejercicio1_6 {
+    public static int calcular(int n) {
+        if (n > 1){
+            if (n % 2 == 0){
+                n = n / 2;
+            }
+            else{
+                n = 3*n+1;
+            }
+        }
+        return n;
+    }
+    //_________________________________________________
+    public ListaDeEnterosEnlazada calcularSucesion (int n) {
+        ListaDeEnterosEnlazada l;
+        if (n > 1){
+            l = calcularSucesion(calcular(n));
+        }
+        else{
+            l = new ListaDeEnterosEnlazada();
+        }
+        l.agregarInicio(n);
+        return l;
+    }
+    //_________________________________________________
+    public static void main(String[] args) {
+        Ejercicio1_6 f = new Ejercicio1_6();
+        ListaDeEnterosEnlazada L = f. calcularSucesion(4);
+        //Imprimir
+        
+        L.comenzar();
+        while (!L.fin()) {
+            System.out.println(L.proximo());
+        }
+    }
+}
+```
+Ejercicio_1.7
+=============
+
+- ``a)`` No puedo darle metodos a la clase **ListaEnteros** ya que es una clase abstracta. La clase se define como abstracta ya que sus subclases son abstractas
+
+- ``b)`` Para agregar un nodo al principio de la lista
+
+- ``c)``
+
+
+Ejercicio_2.3
+=============
 
 Ejercicio_3
 ===========

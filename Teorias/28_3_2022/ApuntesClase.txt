@@ -1,0 +1,18 @@
+Profundidad: desde donde estoy hacia arriba
+Altura: desde donde estoy hacia abajo
+El grado de un nodo es la cantidad de hijos que tiene
+El nodo con mayor grado tiene que tener 2 (esto hace que sea un arbol binario)
+Si yo tengo dos hijos, lo voy a llamar arbol binario
+Con tres hijos Arbol terciario
+Cuando uno quiere almacenar informacion en un arbol, tratamos de hacer la menor cantidad de busquedas posibles.
+(Lo mejor acomodado posible)
+Albol lleno: Si cada nodo interno tiene dos hijos, esto nos lleva que cada hoja tenga el mismo nivel.
+Si yo tengo un bb lleno. 
+Arbol Completo: Si es lleno hasta el nivel anterior y el ultimo nivel se llena de izquierda a derecha
+Un arbol lleno es completo pero no un arbol completo es un arbol lleno
+
+los_2(n+1) = (h + 1) * log_2
+
+log_2(n+1)-1 = h
+PosOrden = Sabes cual es la raiz
+InOrden = 
