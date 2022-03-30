@@ -1,0 +1,94 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ColaGenerica",
+            "request": "launch",
+            "mainClass": "tp02.ejercicio3.ColaGenerica"
+        },
+        {
+            "type": "java",
+            "name": "Launch ColaGenerica",
+            "request": "launch",
+            "mainClass": "ColaGenerica",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch TestListaEnlazadaGenerica",
+            "request": "launch",
+            "mainClass": "TestListaEnlazadaGenerica",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio1_6",
+            "request": "launch",
+            "mainClass": "Ejercicio1_6"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio1_5",
+            "request": "launch",
+            "mainClass": "Ejercicio1_5"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestListaDeEnterosConArreglos",
+            "request": "launch",
+            "mainClass": "TestListaDeEnterosConArreglos"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AplicacionDePrueba",
+            "request": "launch",
+            "mainClass": "practica1.src.AplicacionDePrueba",
+            "projectName": "Practica1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cinco",
+            "request": "launch",
+            "mainClass": "practica1.src.cinco",
+            "projectName": "Practica1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cuatro",
+            "request": "launch",
+            "mainClass": "practica1.src.cuatro",
+            "projectName": "Practica1"
+        },
+        {
+            "type": "java",
+            "name": "Launch dos",
+            "request": "launch",
+            "mainClass": "practica1.src.dos",
+            "projectName": "Practica1"
+        },
+        {
+            "type": "java",
+            "name": "Launch tres",
+            "request": "launch",
+            "mainClass": "practica1.src.tres",
+            "projectName": "Practica1"
+        },
+        {
+            "type": "java",
+            "name": "Launch uno",
+            "request": "launch",
+            "mainClass": "practica1.src.uno",
+            "projectName": "Practica1"
+        }
+    ]
+}
