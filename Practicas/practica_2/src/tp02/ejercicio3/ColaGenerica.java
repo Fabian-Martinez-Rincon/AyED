@@ -19,3 +19,4 @@ public class ColaGenerica<T> {
         return datos.esVacia();
     }
 }
+

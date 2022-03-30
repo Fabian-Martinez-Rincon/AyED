@@ -72,7 +72,7 @@ public class Ejercicio1_6 {
 }
 ```
 
-```1.7)``` Analice las implementaciones de la clase **ListaDeEnteros** y sus subclases.
+```1.7)``` Analice las implementaciones de la clase **ListaDeEnteros** y sus subclases.[Resolución](#Ejercicio_1.7)
 
 - ```a)``` ¿Podría darle comportamiento a algún método de la superclase **ListaDeEnteros**? ¿Por qué la clase se define como abstracta? Note que una subclase implementa la lista usando un arreglo de tamaño fijo y la otra usando nodos enlazados.
 - ```b)``` Considerando los enlaces entre nodos, ¿qué diferencias existen entre agregar un nodo al principio de la lista, agregar un nodo en el medio y agregar un nodo al final?
@@ -104,7 +104,7 @@ clonar(): //Crea una copia de la lista genérica y la retorna.
 <img src="./img/3_3.png"/>
  </div>
 
-```2.1)``` ¿Podría resolver los ejercicios del punto 1 utilizando listas genéricas?
+```2.1)``` ¿Podría resolver los ejercicios del punto 1 utilizando listas genéricas?[Resolución](#Ejercicio_2.1)
 
 ```2.2)``` Importe el archivo **ListasGenericas.zip** dado por la cátedra en Eclipse usando la opción Import > Existing Projects into Workspace, y luego click en ```Select archive file``` y seleccione el archivo .zip descargado. Para poder usar las listas genéricas y sus operaciones, en cada una de las declaraciones de clases se debe agregar **import tp02.ejercicio2.***;
 
@@ -291,14 +291,170 @@ Ejercicio_1.7
 
 - ``b)`` Para agregar un nodo al principio de la lista
 
-- ``c)``
+- ``c)`` Su primer elemento depende de la implementación ya que no necesariamente dependen de las primeras posiciónes.
 
+Ejercicio_2.1
+=============
+
+No se podrian implementar los ejercicios del punto uno con listas genericas ya que sus subclases son abstractas
 
 Ejercicio_2.3
 =============
 
+```Java
+import tp02.ejercicio2.*;
+
+public class TestListaEnlazadaGenerica {
+    public static void main(String[] args) {
+        System.out.println("Hola");
+        Estudiante est1 = new Estudiante("Fabian", "Martinez", "1b","gmail.com","74/23");
+        Estudiante est2 = new Estudiante("Fabo", "Martin Garrix", "1a","hotmail.com","123");
+        Estudiante est3 = new Estudiante("Fabian2", "Martinez2", "1b2","gmail.com2","74/232");
+        Estudiante est4 = new Estudiante("Fabo2", "Martin Garrix2", "1a2","hotmail.com2","1232");
+        ListaEnlazadaGenerica<Estudiante> l = new ListaEnlazadaGenerica<Estudiante>();
+        l.agregarFinal(est1);
+        l.agregarFinal(est2);
+        l.agregarFinal(est3);
+        l.agregarFinal(est4);
+        l.comenzar();
+        for (int i = 1; i <= l.tamanio(); i++){
+            System.out.println(l.elemento(i).tusDatos());
+        } 
+    }    
+}
+```
+
+Ejercicio_2.4
+=============
+
+- ```a)```
+- ```b)```
+- ```c)```
+- ```d)```
+
+
 Ejercicio_3
 ===========
 
+<table>
+<tr>
+<td> Cola Generica </td> <td> Pila Generica </td>
+</tr>
+<tr>
+<td>
+ 
+```Java
+package tp02.ejercicio3;
+import tp02.ejercicio2.*;
+public class ColaGenerica<T> {
+    //__________________________________________________
+    private ListaGenerica<T> datos = new ListaEnsalzadaGenerica<T>();
+
+    public void encontar(T elem){
+        datos.agregarFinal(elem);    
+    }
+    public T desencolar(){
+        T elemento = this.tope();
+        datos.eliminarEn(1); //Elimino el primer elemento y despues lo retorno uwu
+        return elemento;
+    }
+    public T tope(){
+        return datos.elemento(1);
+    }
+    public boolean esVacia(){
+        return datos.esVacia();
+    }
+}
+```
+</td>
+<td>
+ 
+
+```Java
+package tp02.ejercicio3;
+import tp02.ejercicio2.*;
+
+public class PilaGenerica<T> {
+    //__________________________________________________
+    private ListaGenerica<T> datos = new ListaEnlazadaGenerica<T>();
+
+    public void apilar(T elem){
+        datos.agregarFinal(elem);    
+    }
+    public T desapilar(){
+        T elemento = this.tope();
+        datos.eliminarEn(1); //Elimino el primer elemento y despues lo retorno uwu
+        return elemento;
+    }
+    public T tope(){
+        return datos.elemento(1);
+    }
+    public boolean esVacia(){
+        return datos.esVacia();
+    }
+}
+```
+ 
+</td>
+</tr>
+ 
+</table>
+
 Ejercicio_4
 ===========
+```Java
+import java.util.Scanner;
+
+import tp02.ejercicio2.*;
+import tp02.ejercicio3.*;
+public class TestBalanceo {
+    public static boolean esBalanceado(String cadena) {
+        ListaGenerica<Character> inicio = new ListaEnlazadaGenerica<Character>();
+        inicio.agregarFinal('(');
+        inicio.agregarFinal('[');
+        inicio.agregarFinal('{');
+
+        ListaGenerica<Character> cierre = new ListaEnlazadaGenerica<Character>();
+        cierre.agregarFinal('(');
+        cierre.agregarFinal('[');
+        cierre.agregarFinal('{');
+
+        PilaGenerica<Character> pila = new PilaGenerica<Character>();
+        
+        Character actual,elem;
+
+        for (int i=0 ; i<cadena.length(); i++){
+            actual = cadena.charAt(i);
+            if (inicio.incluye(actual)){
+                pila.apilar(actual);
+            }
+            else{
+                elem = pila.desapilar();
+                if (inicio.elemento(elem) != cierre.elemento(actual)) {
+                    return false;
+                }
+            }
+
+        }
+        if (!pila.esVacia()){
+            return false;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner consola = new Scanner(System.in);
+        System.out.println("Solo puede ingresar los siguientes caracteres: ");
+        System.out.println("{}[]() en el orden en el quiera: ");
+		String cadena = consola.nextLine();
+		consola.close();
+  
+        if (esBalanceado(cadena)){
+            System.out.println("La expresion esta balanceada: " + cadena);
+        }
+        else 
+            {
+                System.out.println("La expresion no esta balanceada" );
+            }
+    }
+}
+```
