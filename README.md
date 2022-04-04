@@ -1,5 +1,10 @@
 <h1 align="center"> 💻Algoritmos y Estructuras de Datos </h1>
 
+<div align="center">
+<img src="https://media.giphy.com/media/5lbtfD3Hev1nvPaZhz/giphy.gif"/>
+ </div>
+<br>
+
 ## Indice de Taller
 
 - [Java (Teoria) ☕](/Documentos/Java.md)
