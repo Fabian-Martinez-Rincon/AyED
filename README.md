@@ -6,7 +6,7 @@
 
 <table >
 <tr>
-<td> Taller </td> <td> Ayed Practica</td> <td>Ayed Teoria</td>
+<td> Taller de Programación</td> <td> Ayed Practica</td> <td>Ayed Teoria</td>
 </tr>
 <tr>
 <td>
@@ -27,6 +27,7 @@
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
 - [Practica 3](/Documentos/Practica3.md)
+- [Practica 4](/Documentos/Practica4.md)
 
  
 </td>
