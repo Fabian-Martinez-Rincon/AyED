@@ -6,7 +6,7 @@
 
 <table >
 <tr>
-<td> Taller </td> <td> Ayed</td>
+<td> Taller </td> <td> Ayed Practica</td> <td>Ayed Teoria</td>
 </tr>
 <tr>
 <td>
@@ -23,12 +23,19 @@
 <td>
  
 
-- [Teoria](/Documentos/TeoriaNueva.md)
+
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
+- [Practica 3](/Documentos/Practica3.md)
 
  
 </td>
+<td> 
+
+- [Teoria (1er Parcial)](/Documentos/TeoriaNueva.md)
+
+</td>
+
 </tr>
  
 </table>
