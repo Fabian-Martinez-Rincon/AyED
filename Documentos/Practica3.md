@@ -397,18 +397,206 @@ public class ArbolBinario<T> {
 }
 ```
 
+Para_Probar
+===========
+```Java
+package Ejercicio2;
+import PackFabo.*;
+public class Ej2 {
+    public static void main(String[] args) {
+        //          A
+        //        /   \
+        //       B     C
+        //        \
+        //         D
+        ArbolBinario<String> a =new ArbolBinario("A");
+        ArbolBinario<String> b =new ArbolBinario("B");
+        ArbolBinario<String> c =new ArbolBinario("C");
+        ArbolBinario<String> d =new ArbolBinario("D");
+        a.agregarHijoIzquierdo(b);
+        a.agregarHijoDerecho(c);
+        b.agregarHijoDerecho(d);
+
+        System.out.println("Su arbol tiene "+a.contarNodos()+" nodos");
+        System.out.println("Su arbol tiene "+a.contarHojas()+" hojas");
+        System.out.println("Su arbol tiene una altura de "+a.altura());
+        System.out.println("-------INORDEN--------");
+        a.printInorden();
+        System.out.println("-------POSTORDEN-------");
+        a.printPostorden();
+        System.out.println("-------PREORDEN--------");
+        a.printPreorden();
+        System.out.println("-------POR NIVELES------");
+        a.printPorNiveles();
+        System.out.println("-------ENTRE NIVELES-----");
+        a.entreNiveles(1,2);
+
+        ArbolBinario<String> arbolEspejo = a.espejo();
+        System.out.println("----PREORDEN ESPEJO---");
+        arbolEspejo.printPreorden();
+
+        if(a.esLleno()){
+            System.out.println("ES LLENO");
+        }else{
+            System.out.println("NO ES LLENO");
+        }
+    }
+}
+```
+
 Ejercicio_3
 -----------
 
 ```Java
+package Ejercicio3;
+import PackFabo.*;
 
+public class ContadorArbol {
+    private ListaEnlazadaGenerica<Integer> paresPostOrden(ArbolBinario<Integer> arbol, ListaEnlazadaGenerica<Integer> lista){
+        if (arbol.tieneHijoIzquierdo()){
+            paresPostOrden(arbol.getHijoIzquierdo(),lista);
+        }
+        if (arbol.tieneHijoDerecho()){
+            paresPostOrden(arbol.getHijoDerecho(),lista);
+        }
+        if ((arbol.getDato() % 2) == 0){
+            lista.agregarFinal(arbol.getDato());
+            //lista.agregarInicio(arbol.getDato()); Esto tambien se podria?
+        }
+        return lista;
+    }
+    private ListaEnlazadaGenerica<Integer> paresInOrden(ArbolBinario<Integer> arbol, ListaEnlazadaGenerica<Integer> lista){
+        if (arbol.tieneHijoIzquierdo()){
+            paresInOrden(arbol.getHijoIzquierdo(),lista);
+        }
+        if ((arbol.getDato() % 2) == 0){
+            lista.agregarFinal(arbol.getDato());
+            //lista.agregarInicio(arbol.getDato()); Esto tambien se podria?
+        }
+        if (arbol.tieneHijoDerecho()){
+            paresInOrden(arbol.getHijoDerecho(),lista);
+        }
+        return lista;
+    }
+    private ListaEnlazadaGenerica<Integer> numerosParesPostOrden(ArbolBinario<Integer> arbol){
+        ListaEnlazadaGenerica<Integer> lista = new ListaEnlazadaGenerica<>();
+        this.paresPostOrden(arbol, lista);
+        return lista;
+    }
+    private ListaEnlazadaGenerica<Integer> numerosParesInOrden(ArbolBinario<Integer> arbol){
+        ListaEnlazadaGenerica<Integer> lista = new ListaEnlazadaGenerica<>();
+        this.paresInOrden(arbol, lista);
+        return lista;
+    }
+}
+```
+
+Para_Probar
+===========
+
+```Java
+package Ejercicio3;
+import PackFabo.*;
+public class Ej3 {
+    public static void main(String[] args) {
+        //          14
+        //         /  \
+        //        53   2
+        //       /    / \
+        //      12   33 102
+        //Creo los nodos
+        ArbolBinario<Integer> num14 =new ArbolBinario(14);
+        ArbolBinario<Integer> num53 =new ArbolBinario(53);
+        ArbolBinario<Integer> num2 =new ArbolBinario(2);
+        ArbolBinario<Integer> num12 =new ArbolBinario(12);
+        ArbolBinario<Integer> num33 =new ArbolBinario(33);
+        ArbolBinario<Integer> num102 =new ArbolBinario(102);
+
+        //Los agrego segun el arbol que tengo entre comentarios arriba
+        num14.agregarHijoIzquierdo(num53);
+        num14.agregarHijoDerecho(num2);
+        num53.agregarHijoIzquierdo(num12);
+        num2.agregarHijoIzquierdo(num33);
+        num2.agregarHijoDerecho(num102);
+
+        //Solo los imprimo dependiendo del orden
+        System.out.println("---PARES DEL POSTORDEN---");
+        ContadorArbol cont = new ContadorArbol();
+        ListaEnlazadaGenerica<Integer> lista =cont.numerosParesPostOrden(num14);
+        lista.comenzar();
+        while(!lista.fin()){
+            System.out.println(lista.proximo());
+        }
+
+        System.out.println("---PARES DEL INORDEN---");
+        ListaEnlazadaGenerica<Integer> lista2 =cont.numerosParesInOrden(num14);
+        lista2.comenzar();
+        while(!lista2.fin()){
+            System.out.println(lista2.proximo());
+        }
+    }
+}
 ```
 
 Ejercicio_4
 -----------
 
 ```Java
+package Ejercicio4;
+import PackFabo.ArbolBinario;
+public class RedBinariaLlena {
+    private static ArbolBinario<Integer> arbol = new ArbolBinario<>();
+    public void setArbol(ArbolBinario<Integer> arbol) {
+        RedBinariaLlena.arbol = arbol;
+    }
+    public static ArbolBinario<Integer> getArbol() {
+        return arbol;
+    }
+    public static int retardoReenvio(ArbolBinario <Integer> arbol){
+        int HI,HD,max;
+        if (arbol.esHoja()){
+            return arbol.getDato();
+        }else{
+            HI=retardoReenvio(arbol.getHijoIzquierdo());
+            HD=retardoReenvio(arbol.getHijoDerecho());
+            max=Math.max(HI,HD);
+            return max+arbol.getDato();
+        }
+    }
+}
+```
+Para_Probar
+===========
 
+```Java
+package Ejercicio4;
+import PackFabo.*;
+public class Ej4 {
+    public static void main(String[] args) {
+        //           14
+        //         /    \
+        //        53     2
+        //       / \    / \
+        //      12  9  33 102
+        ArbolBinario<Integer> catorce =new ArbolBinario(14);
+        ArbolBinario<Integer> cincuentaYTres =new ArbolBinario(53);
+        ArbolBinario<Integer> dos =new ArbolBinario(2);
+        ArbolBinario<Integer> doce =new ArbolBinario(12);
+        ArbolBinario<Integer> nueve = new ArbolBinario(9);
+        ArbolBinario<Integer> treintaYTres =new ArbolBinario(33);
+        ArbolBinario<Integer> cientoDos =new ArbolBinario(102);
+
+        catorce.agregarHijoIzquierdo(cincuentaYTres);
+        catorce.agregarHijoDerecho(dos);
+        cincuentaYTres.agregarHijoIzquierdo(doce);
+        cincuentaYTres.agregarHijoDerecho(nueve);
+        dos.agregarHijoIzquierdo(treintaYTres);
+        dos.agregarHijoDerecho(cientoDos);
+
+        RedBinariaLlena red = new RedBinariaLlena();
+        System.out.println("El mayor retardo es de "+red.retardoReenvio(catorce)+" segs");
+    }
+}
 ```
 
 Ejercicio_5
