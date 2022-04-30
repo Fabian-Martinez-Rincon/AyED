@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33f9e6ab-edbf-404f-8f92-bf915c6f8a85" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Documentos/Practica3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Documentos/Practica3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/Alumno.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/Alumno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/AplicacionDePrueba.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/AplicacionDePrueba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/Estudiante.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/Estudiante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/IncisoB.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/IncisoB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/Profesor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/Profesor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/cinco.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/cinco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/cuatro.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/cuatro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/dos.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/dos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/tres.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/tres.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica1/practica1/src/uno.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practica1/practica1/src/uno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica3/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica3/2022_TP03_AB.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica3/src/App.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="28TlQ7WweksW72hJydhHzVXAEwA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Practica3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Practica3" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f9e6ab-edbf-404f-8f92-bf915c6f8a85" name="Changes" comment="" />
+      <created>1651248448292</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651248448292</updated>
+      <workItem from="1651248449383" duration="81000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
