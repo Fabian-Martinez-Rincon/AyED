@@ -6,7 +6,7 @@
 
 <table >
 <tr>
-<td> Taller de Programación</td> <td> Ayed Practica</td> <td>Ayed Teoria</td>
+<td> Taller de Programación</td> <td> Ayed Practica</td>
 </tr>
 <tr>
 <td>
@@ -22,20 +22,19 @@
 </td>
 <td>
  
-
-
+**Primer Parcial**
 - [Practica 1](/Documentos/Practica1.md)
 - [Practica 2](/Documentos/Practica2.md)
 - [Practica 3](/Documentos/Practica3.md)
 - [Practica 4](/Documentos/Practica4.md)
+- [Practica Teorica Abb]()
+- [Practica Teorica Heap]()
 
- 
+**Segundo Parcial**
+- [Practica 5]()
+
 </td>
-<td> 
 
-- [Teoria (1er Parcial)](/Documentos/TeoriaNueva.md)
-
-</td>
 
 </tr>
  
