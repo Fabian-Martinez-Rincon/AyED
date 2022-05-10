@@ -51,15 +51,46 @@ Los métodos `altura(), nivel(T) y ancho()` se resolverán en el ejercicio 4.
 Analice la implementación en JAVA de las clases `ArbolGeneral` brindadas por la cátedra
 
 
-### `Ejercicio 2` [Resolución](#Ejercicio_2)
+### `Ejercicio 2` 
 
 - `a)` ¿Qué recorridos conoce para recorrer en profundidad un árbol general? Explique brevemente.
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
+</details>
+
 - `b)` ¿Qué recorridos conoce para recorrer por niveles un árbol general? Explique brevemente.
+
+<summary>📚 Resolución</summary>
+<br/>
+
+</details>
+
 - `c)` ¿Existe alguna diferencia entre los recorridos preorden, postorden, inorden para recorrer los árboles generales respecto de los árboles binarios? Justifique su respuesta.
+
+<summary>📚 Resolución</summary>
+<br/>
+
+</details>
+
 - `d)` ¿Existe alguna noción de orden entre los elementos de un árbol general? Justifique su respuesta.
+
+<summary>📚 Resolución</summary>
+<br/>
+
+</details>
+
 - `e)` En un árbol general se define el `grado de un nodo` como el número de hijos de ese nodo y el `grado del árbol` como el máximo de los grados de los nodos del árbol. ¿Qué relación encuentra entre los Árboles Binarios sin tener en cuenta la implementación? Justifique su respuesta
 
-### `Ejercicio 3` [Resolución](#Ejercicio_3)
+<summary>📚 Resolución</summary>
+<br/>
+
+</details>
+
+### `Ejercicio 3` 
 
 - `a)` Implemente en la clase `RecorridosAG` los siguientes métodos:
 
@@ -85,7 +116,7 @@ Método que retorna una lista con los elementos impares del árbol “a” que s
 public ListaGenerica< Integer > numerosImparesMayoresQuePorNiveles(ArbolGeneral <Integer> a, Integer n)
 ```
 
-### `Ejercicio 4` [Resolución](#Ejercicio_4)
+### `Ejercicio 4` 
 
 Implemente en la clase `ArbolGeneral` los siguientes métodos
 
@@ -94,7 +125,7 @@ Implemente en la clase `ArbolGeneral` los siguientes métodos
 - `c)` **public int ancho(): int** la amplitud (ancho) de un árbol se define como la cantidad de nodos que se encuentran en el nivel que posee la mayor cantidad de nodos.
 
 
-### `Ejercicio 5` [Resolución](#Ejercicio_5)
+### `Ejercicio 5` 
 
 El esquema de comunicación de una empresa está organizado en una estructura jerárquica, en donde cada nodo envía el mensaje a sus descendientes. Cada nodo posee el tiempo que tarda en transmitir el mensaje. 
 
@@ -156,23 +187,4 @@ debería retornar 25.0
 
  </div>
 
-Ejercicio_1
------------
 
-Ejercicio_2
------------
-
-Ejercicio_3
------------
-
-Ejercicio_4
------------
-
-Ejercicio_5
------------
-
-Ejercicio_6
------------
-
-Ejercicio_7
------------

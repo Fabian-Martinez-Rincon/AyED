@@ -4,135 +4,14 @@
 
 <h1 align="center">Primera Parte</h1>
 
-```1)``` Escriba un programa que imprima en consola el factorial de un número N (ingresado por teclado, N > 0). Ejemplo: para N = 5 deberia imprimir ```5! = 120```. [Resolución](#Ejercicio_1)
+```1)``` Escriba un programa que imprima en consola el factorial de un número N (ingresado por teclado, N > 0). Ejemplo: para N = 5 deberia imprimir ```5! = 120```. 
 
-```2)``` Escriba un programa que imprima en consola el factorial de todos los números entre 1 y 9 ¿Qué modificación debe hacer para imprimir el factorial de los números impares solamente?. [Resolución](#Ejercicio_2)
+<details>
 
-```3)``` Escriba un programa que lea las alturas de los 15 jugadores de un equipo de básket y las almacene en un vector. Luego informe. [Resolución](#Ejercicio_3)
-  - La altura promedio
-  - La cantidad de jugadores con altura por encima del promedio
+<summary>📚 Resolución</summary>
+<br/>
 
-```4)``` Escriba un programa que defina una matriz de enteros de tamaño 10x10. Inicialice la matriz con números aleatorios entre 0 y 200. [Resolución](#Ejercicio_4)
 
-Luego realice las siguientes operaciones.
-- Mostrar el contenido de la matriz en consola.
-- Calcular e informar la suma de todos los elementos almacenados entre las filas 2 y 9 y las columnas 0 y 3
-- Generar un vector de 10 posiciones donde cada posición i contiene la suma de los elementos de la columna i de la matriz.
-- Lea un valor entero e indique si se encuentra o no en la matriz. En caso de encontrarse indique su ubicación (fila y columna) en caso contrario imprima "No se encontró el elemento".
-
-```5)```  Un edificio de oficinas está conformado por 8 pisos y 4 oficinas por piso. Realice un programa que permita informar la cantidad de personas que concurrieron a 
-cada oficina de cada piso. Para esto, simule la llegada de personas al edificio de la siguiente manera: a cada persona se le pide el nro. de piso y nro. de oficina a la cual 
-quiere concurrir. La llegada de personas finaliza al indicar un nro. de piso 9. Al finalizar la llegada de personas, informe lo pedido. [Resolución](#Ejercicio_5)
-
-```6)``` Escriba un programa que simule el ingreso de personas a un banco. Cada persona que ingresa indica la operación que desea realizar (0: “cobro de cheque” 1: 
-“depósito/ extracción en cuenta” 2: “pago de impuestos o servicios” 3: “cobro de jubilación” 4: “cobro de planes”). La recepción de personas culmina cuando un 
-empleado ingresa la operación 5 (cierre del banco). Informar la cantidad de personas atendidas por cada operación y la operación más solicitada. [Resolución](#Ejercicio_6)
-
-<h1 align="center">Segunda Parte</h1>
-
-```1)``` Se dispone de una clase Persona (ya implementada en la carpeta tema2). Un objeto persona puede crearse sin valores iniciales o enviando en el mensaje de creación el nombre, DNI y edad (en ese orden). Un objeto persona responde a los siguientes mensajes: [Resolución](#Ejercicio_1_Parte2)
-
-```
-getNombre() retorna el nombre (String) de la persona
-getDNI() retorna el dni (int) de la persona
-getEdad() retorna la edad (int) de la persona
-setNombre(X) modifica el nombre de la persona al “String” pasado por parámetro (X)
-setDNI(X) modifica el DNI de la persona al “int” pasado por parámetro (X)
-setEdad(X) modifica la edad de la persona al “int” pasado por parámetro (X)
-toString() retorna un String que representa al objeto. Ej: “Mi nombre es Mauro, mi DNI es 
-11203737 y tengo 70 años
-```
-
-Realice un programa que cree un objeto persona con datos leídos desde teclado. Luego muestre en consola la representación de ese objeto en formato String. 
-
-Piense y responda: ¿Qué datos conforman el estado del objeto persona? ¿Cómo se implementan dichos datos? ¿Qué ocurre cuando se le envía un mensaje al objeto?
-
-```2)``` Realice un programa que cree un objeto persona con datos leídos desde teclado. Luego muestre en consola la representación de ese objeto en formato String. 
-Piense y responda: ¿Qué datos conforman el estado del objeto persona? ¿Cómo se implementan dichos datos? ¿Qué ocurre cuando se le envía un mensaje al objeto?
-[Resolución](#Ejercicio_2_Parte2)
-
-- Informe la cantidad de personas mayores de 65 años.
-- Muestre la representación de la persona con menor DNI
-
-```3)``` Indique qué imprimen los siguientes programas. Responda: ¿Qué efecto tiene la asignación utilizada con objetos? ¿Qué se puede concluir acerca de la comparación con == 
-y != utilizada con objetos? ¿Qué retorna el mensaje equals cuando se le envía a un String?[Resolución](#Ejercicio_3_Parte2)
-
-![image (2)](https://user-images.githubusercontent.com/55964635/136676882-ddb5b385-d184-4577-96d4-d454b17262f3.png)
-
-```4)``` Se realizará un casting para un programa de TV. El casting durará a lo sumo 5 días y en 
-cada día se entrevistarán a 8 personas en distinto turno. [Resolución](#Ejercicio_4_Parte2)
-
-- Simular el proceso de inscripción de personas al casting. A cada persona se le pide nombre, DNI y edad y se la debe asignar en un día y turno de la siguiente manera: las
-personas primero completan el primer día en turnos sucesivos, luego el segundo día y así siguiendo. La inscripción finaliza al llegar una persona con nombre “ZZZ” o al cubrirse los 40 cupos de casting.
-
-```Una vez finalizada la inscripción:``` 
-
-- Informar para cada día y turno el nombre de la persona a entrevistar. 
-
-NOTA: utilizar la clase Persona y pensar en la estructura de datos a utilizar.
-
-```5)```  Realice un programa que cargue un vector con 10 strings leídos desde teclado. El vector generado tiene un mensaje escondido que se forma a partir de la primera letra de cada string. Muestre el mensaje escondido en consola. [Resolución](#Ejercicio_5_Parte2)
-```
-NOTA: La primera letra de un string se obtiene enviándole el mensaje charAt(0) al objeto string. 
-Probar con: humo oso lejos ala menos usado nene de ocho ! Debería imprimir: holamundo!
-```
-```6)``` Se dispone de la clase Partido (ya implementada en la carpeta tema2). Un objeto partido representa un encuentro entre dos equipos (local y visitante). Un objeto partido 
-puede crearse sin valores iniciales o enviando en el mensaje de creación el nombre del equipo local, el nombre del visitante, la cantidad de goles del local y del visitante (en ese orden). Un objeto partido sabe responder a los siguientes mensajes: [Resolución](#Ejercicio_6_Parte2)
-
-```
-getLocal() retorna el nombre (String) del equipo local
-getVisitante() retorna el nombre (String) del equipo visitante
-getGolesLocal() retorna la cantidad de goles (int) del equipo local
-getGolesVisitante() retorna la cantidad de goles (int) del equipo visitante
-setLocal(X) modifica el nombre del equipo local al “String” pasado por parámetro (X)
-setVisitante(X) modifica el nombre del equipo visitante al “String” pasado por parámetro (X)
-setGolesLocal(X) modifica la cantidad de goles del equipo local “int” pasado por parámetro (X)
-setGolesVisitante(X) modifica la cantidad de goles del equipo visitante “int” pasado por parámetro (X)
-hayGanador() retorna un boolean que indica si hubo (true) o no hubo (false) ganador
-getGanador() retorna el nombre (String) del ganador del partido (si no hubo retorna un String 
-vacío). 
-hayEmpate() retorna un boolean que indica si hubo (true) o no hubo (false) empate
-```
-
-Implemente un programa que cargue un vector con a lo sumo 20 partidos disputados en el campeonato. La información de cada partido se lee desde teclado hasta ingresar uno con 
-nombre de visitante “ZZZ” o alcanzar los 20 partidos. Luego de la carga informar:
-- La cantidad de partidos que ganó River.
-- El total de goles que realizó Boca jugando de local.
-- El porcentaje de partidos finalizados con empate.
-
-<h1 align="center">Teoria</h1>
-
-Queremso simular la entrada de autos al estacionamiento municipal en el centro de la ciudad. Según los dias, el acceso está restringido según la patente del auto.
-
-```1)``` Realice un programa que genere aleatoriamente números (patentes) hasta el 0. Por cada una debe informar en consola si el auto tiene o no permitido el paso (solo pasan los autos con patentes de números pares). [Resolución](#Ejercicio_1_Teoria)
-
-```2)a)```  Realice un nuevo programa considerando que ahora el estacionamiento está dividido en 5 pisos y cada piso tiene 10 plazas. Por cada patente generada, debe 
-ingresar por teclado el número de piso y número de plaza donde debe estacionar el auto, debiendo marcar ese lugar como ocupado en una estructura de datos adecuada. [Resolución](#Ejercicio_2_Teoria)
-
-```
-NOTA: Considere que el lugar ingresado (número de piso, número de plaza) está desocupado y dichos números son válidos.
-```
-```b )```Informe cuál es el piso más ocupado.
-
-```3)a)``` Utilizando la clase Auto dada por la cátedra. Un objeto auto se crea sin valores 
-iniciales. Un objeto auto responde a los siguientes mensajes: [Resolución](#Ejercicio_3_Teoria)
-
-```
-getPatente() retorna la patente (int) del auto
-getDueño() retorna el nombre del dueño (String) del auto
-setPatente(X) modifica el número de patente al “int” pasado por parámetro (X)
-setDueño(X) modifica el nombre del dueño al “String” pasado por parámetro (X)
-toString() retorna un String que representa al objeto. Ej: “Patente 111222 Dueño Carla 
-Perez” 
-```
-Modifique el ejercicio 2 para almacenar en la estructura de datos el auto que ocupa cada plaza.
-
-```3)b)``` A partir de la estructura de autos, informar para cada número de piso y número de plaza ocupado, la representación del auto que la ocupa. 
-
-<h1 align="center">Resoluciones</h1>
-
-Ejercicio_1
-===========
 ```Java
 package practica1;
 
@@ -149,8 +28,18 @@ public class Ejercicio1 {
     }
 }
 ```
-Ejercicio_2
-===========
+
+
+</details>
+
+
+```2)``` Escriba un programa que imprima en consola el factorial de todos los números entre 1 y 9 ¿Qué modificación debe hacer para imprimir el factorial de los números impares solamente?. 
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 public class Pruebas {
@@ -170,8 +59,18 @@ public class Pruebas {
     }
 }
 ```
-Ejercicio_3
-===========
+
+</details>
+
+```3)``` Escriba un programa que lea las alturas de los 15 jugadores de un equipo de básket y las almacene en un vector. Luego informe. 
+  - La altura promedio
+  - La cantidad de jugadores con altura por encima del promedio
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -202,8 +101,23 @@ public class Pruebas {
     }
 }
 ```
-Ejercicio_4
-===========
+
+</details>
+
+
+```4)``` Escriba un programa que defina una matriz de enteros de tamaño 10x10. Inicialice la matriz con números aleatorios entre 0 y 200. 
+
+Luego realice las siguientes operaciones.
+- Mostrar el contenido de la matriz en consola.
+- Calcular e informar la suma de todos los elementos almacenados entre las filas 2 y 9 y las columnas 0 y 3
+- Generar un vector de 10 posiciones donde cada posición i contiene la suma de los elementos de la columna i de la matriz.
+- Lea un valor entero e indique si se encuentra o no en la matriz. En caso de encontrarse indique su ubicación (fila y columna) en caso contrario imprima "No se encontró el elemento".
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -284,8 +198,18 @@ public class Pruebas {
 ```
 ![image](https://user-images.githubusercontent.com/55964635/136677316-66063c49-906d-4662-a267-f13831736797.png)
 
-Ejercicio_5
-===========
+</details>
+
+
+```5)```  Un edificio de oficinas está conformado por 8 pisos y 4 oficinas por piso. Realice un programa que permita informar la cantidad de personas que concurrieron a 
+cada oficina de cada piso. Para esto, simule la llegada de personas al edificio de la siguiente manera: a cada persona se le pide el nro. de piso y nro. de oficina a la cual 
+quiere concurrir. La llegada de personas finaliza al indicar un nro. de piso 9. Al finalizar la llegada de personas, informe lo pedido. 
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -318,8 +242,17 @@ public class Pruebas {
 ```
 ![image](https://user-images.githubusercontent.com/55964635/136677421-e3cdd8c2-7637-4329-a0fb-6f3d55470592.png)
 
-Ejercicio_6
-===========
+</details>
+
+```6)``` Escriba un programa que simule el ingreso de personas a un banco. Cada persona que ingresa indica la operación que desea realizar (0: “cobro de cheque” 1: 
+“depósito/ extracción en cuenta” 2: “pago de impuestos o servicios” 3: “cobro de jubilación” 4: “cobro de planes”). La recepción de personas culmina cuando un 
+empleado ingresa la operación 5 (cierre del banco). Informar la cantidad de personas atendidas por cada operación y la operación más solicitada. 
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -364,8 +297,33 @@ public class Pruebas {
 ```
 ![image](https://user-images.githubusercontent.com/55964635/136677513-43155a5e-b6e7-4693-aa07-1f9c7e254312.png)
 
-Ejercicio_1_Parte2
-==================
+
+</details>
+
+<h1 align="center">Segunda Parte</h1>
+
+```1)``` Se dispone de una clase Persona (ya implementada en la carpeta tema2). Un objeto persona puede crearse sin valores iniciales o enviando en el mensaje de creación el nombre, DNI y edad (en ese orden). Un objeto persona responde a los siguientes mensajes: 
+
+```
+getNombre() retorna el nombre (String) de la persona
+getDNI() retorna el dni (int) de la persona
+getEdad() retorna la edad (int) de la persona
+setNombre(X) modifica el nombre de la persona al “String” pasado por parámetro (X)
+setDNI(X) modifica el DNI de la persona al “int” pasado por parámetro (X)
+setEdad(X) modifica la edad de la persona al “int” pasado por parámetro (X)
+toString() retorna un String que representa al objeto. Ej: “Mi nombre es Mauro, mi DNI es 
+11203737 y tengo 70 años
+```
+
+Realice un programa que cree un objeto persona con datos leídos desde teclado. Luego muestre en consola la representación de ese objeto en formato String. 
+
+Piense y responda: ¿Qué datos conforman el estado del objeto persona? ¿Cómo se implementan dichos datos? ¿Qué ocurre cuando se le envía un mensaje al objeto?
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -380,8 +338,21 @@ public class Ejercicio1_Parte2 {
     }
 }
 ```
-Ejercicio_2_Parte2
-==================
+
+</details>
+
+```2)``` Realice un programa que cree un objeto persona con datos leídos desde teclado. Luego muestre en consola la representación de ese objeto en formato String. 
+Piense y responda: ¿Qué datos conforman el estado del objeto persona? ¿Cómo se implementan dichos datos? ¿Qué ocurre cuando se le envía un mensaje al objeto?
+
+
+- Informe la cantidad de personas mayores de 65 años.
+- Muestre la representación de la persona con menor DNI
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 
@@ -423,8 +394,19 @@ public class Ejercicio2_Parte2 {
     }
 }
 ```
-Ejercicio_3_Parte2
-==================
+
+</details>
+
+```3)``` Indique qué imprimen los siguientes programas. Responda: ¿Qué efecto tiene la asignación utilizada con objetos? ¿Qué se puede concluir acerca de la comparación con == 
+y != utilizada con objetos? ¿Qué retorna el mensaje equals cuando se le envía a un String?
+
+![image (2)](https://user-images.githubusercontent.com/55964635/136676882-ddb5b385-d184-4577-96d4-d454b17262f3.png)
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -461,8 +443,25 @@ public class Ejercicio3_Parte2  {
     } 
 }
 ```
-Ejercicio_4_Parte2
-==================
+
+</details>
+
+```4)``` Se realizará un casting para un programa de TV. El casting durará a lo sumo 5 días y en 
+cada día se entrevistarán a 8 personas en distinto turno. 
+
+- Simular el proceso de inscripción de personas al casting. A cada persona se le pide nombre, DNI y edad y se la debe asignar en un día y turno de la siguiente manera: las
+personas primero completan el primer día en turnos sucesivos, luego el segundo día y así siguiendo. La inscripción finaliza al llegar una persona con nombre “ZZZ” o al cubrirse los 40 cupos de casting.
+
+```Una vez finalizada la inscripción:``` 
+
+- Informar para cada día y turno el nombre de la persona a entrevistar. 
+
+NOTA: utilizar la clase Persona y pensar en la estructura de datos a utilizar.
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
 
 ```Java
 package practica1;
@@ -504,8 +503,19 @@ public class Ejercicio4_Parte2 {
     }
 }
 ```
-Ejercicio_5_Parte2
-==================
+
+</details>
+
+```5)```  Realice un programa que cargue un vector con 10 strings leídos desde teclado. El vector generado tiene un mensaje escondido que se forma a partir de la primera letra de cada string. Muestre el mensaje escondido en consola. 
+```
+NOTA: La primera letra de un string se obtiene enviándole el mensaje charAt(0) al objeto string. 
+Probar con: humo oso lejos ala menos usado nene de ocho ! Debería imprimir: holamundo!
+```
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -526,8 +536,38 @@ public class Ejercicio5_Parte2 {
     }
 }
 ```
-Ejercicio_6_Parte2
-==================
+
+</details>
+
+```6)``` Se dispone de la clase Partido (ya implementada en la carpeta tema2). Un objeto partido representa un encuentro entre dos equipos (local y visitante). Un objeto partido 
+puede crearse sin valores iniciales o enviando en el mensaje de creación el nombre del equipo local, el nombre del visitante, la cantidad de goles del local y del visitante (en ese orden). Un objeto partido sabe responder a los siguientes mensajes: 
+
+```
+getLocal() retorna el nombre (String) del equipo local
+getVisitante() retorna el nombre (String) del equipo visitante
+getGolesLocal() retorna la cantidad de goles (int) del equipo local
+getGolesVisitante() retorna la cantidad de goles (int) del equipo visitante
+setLocal(X) modifica el nombre del equipo local al “String” pasado por parámetro (X)
+setVisitante(X) modifica el nombre del equipo visitante al “String” pasado por parámetro (X)
+setGolesLocal(X) modifica la cantidad de goles del equipo local “int” pasado por parámetro (X)
+setGolesVisitante(X) modifica la cantidad de goles del equipo visitante “int” pasado por parámetro (X)
+hayGanador() retorna un boolean que indica si hubo (true) o no hubo (false) ganador
+getGanador() retorna el nombre (String) del ganador del partido (si no hubo retorna un String 
+vacío). 
+hayEmpate() retorna un boolean que indica si hubo (true) o no hubo (false) empate
+```
+
+Implemente un programa que cargue un vector con a lo sumo 20 partidos disputados en el campeonato. La información de cada partido se lee desde teclado hasta ingresar uno con 
+nombre de visitante “ZZZ” o alcanzar los 20 partidos. Luego de la carga informar:
+- La cantidad de partidos que ganó River.
+- El total de goles que realizó Boca jugando de local.
+- El porcentaje de partidos finalizados con empate.
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 package practica1;
 import PaqueteLectura.GeneradorAleatorio;
@@ -574,8 +614,20 @@ public class Ejercicio6_Parte2 {
     }
 }
 ```
-Ejercicio_1_Teoria
-==================
+
+</details>
+
+<h1 align="center">Teoria</h1>
+
+Queremso simular la entrada de autos al estacionamiento municipal en el centro de la ciudad. Según los dias, el acceso está restringido según la patente del auto.
+
+```1)``` Realice un programa que genere aleatoriamente números (patentes) hasta el 0. Por cada una debe informar en consola si el auto tiene o no permitido el paso (solo pasan los autos con patentes de números pares). 
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 import PaqueteLectura.GeneradorAleatorio; //para generar valores aleatorios
 public class Ej1 {
@@ -593,10 +645,23 @@ public class Ej1 {
         }
     }
 }
+```
+
+</details>
+
+```2)a)```  Realice un nuevo programa considerando que ahora el estacionamiento está dividido en 5 pisos y cada piso tiene 10 plazas. Por cada patente generada, debe 
+ingresar por teclado el número de piso y número de plaza donde debe estacionar el auto, debiendo marcar ese lugar como ocupado en una estructura de datos adecuada. 
 
 ```
-Ejercicio_2_Teoria
-==================
+NOTA: Considere que el lugar ingresado (número de piso, número de plaza) está desocupado y dichos números son válidos.
+```
+```b )```Informe cuál es el piso más ocupado.
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 import PaqueteLectura.GeneradorAleatorio; //para generar valores aleatorios
 import PaqueteLectura.Lector; // para leer por teclado
@@ -655,8 +720,31 @@ public class Ej2 {
     }
 }
 ```
-Ejercicio_3_Teoria
-==================
+
+</details>
+
+```3)a)``` Utilizando la clase Auto dada por la cátedra. Un objeto auto se crea sin valores 
+iniciales. Un objeto auto responde a los siguientes mensajes: 
+
+```
+getPatente() retorna la patente (int) del auto
+getDueño() retorna el nombre del dueño (String) del auto
+setPatente(X) modifica el número de patente al “int” pasado por parámetro (X)
+setDueño(X) modifica el nombre del dueño al “String” pasado por parámetro (X)
+toString() retorna un String que representa al objeto. Ej: “Patente 111222 Dueño Carla 
+Perez” 
+```
+Modifique el ejercicio 2 para almacenar en la estructura de datos el auto que ocupa cada plaza.
+
+```3)b)``` A partir de la estructura de autos, informar para cada número de piso y número de plaza ocupado, la representación del auto que la ocupa. 
+
+<h1 align="center">Resoluciones</h1>
+
+<details>
+
+<summary>📚 Resolución</summary>
+<br/>
+
 ```Java
 import PaqueteLectura.GeneradorAleatorio; //para generar valores aleatorios
 import PaqueteLectura.Lector; // para leer por teclado
@@ -743,3 +831,7 @@ public class Ej3 {
     
 }
 ```
+</details>
+
+
+
