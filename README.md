@@ -32,7 +32,7 @@
 
 **Segundo Parcial**
 
-- [Teoria2]()
+- [Teoria](/Documentos/Teoria_2do_Parcial.md)
 - [Practica 5]()
 
 </td>
