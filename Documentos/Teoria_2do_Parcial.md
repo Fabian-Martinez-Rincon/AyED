@@ -3,7 +3,7 @@
 ### *Indice*
 
 - [Introducción al concepto T(n)](#Introducción_al_concepto_T(n))
-- [Cálculo del T(n)]()
+- [Cálculo del T(n)](#Cálculo_del_Tiempo_de_Ejecución)
 
 ### Introducción
 
@@ -16,6 +16,7 @@ Nos permite comparar algoritmos en forma independiente de una plataforma en part
 - Identificar las operaciones abstractas, sobre las que se basa el algoritmo
 - Realizar un análisis matemático, para encontrar los valores de las cantidades del punto anterior
 
+---
 
 ### Introducción_al_concepto_T(n)
 
@@ -92,13 +93,111 @@ aumenta:……….?
 $$n\rightarrow 2*n$$
 
 - b.- El triple
-
 $$10n^{2} \rightarrow 10*(2n)^{2} = 10*4*n^{2}$$
 
+---
+
+## Cálculo_del_Tiempo_de_Ejecución
 
 
+<table>
+<tr>
+<td> Estructuras </td> <td> Tiempo </td>
+</tr>
+<tr>
+<td>
+ 
+```java
+int sum = 0;
+int [] a = new int [n][n];
+for (int i =1; i<= n ; i++) {
+    for (int j =1; j<= n ; j++)
+        sum += a[i][j];
+}
+```
 
+</td>
+<td>
 
+$T(n) = cte_{1} + \sum_{i=1}^{n}\sum_{j=1}^{n}cte_{2}=$
+
+$= cte_{1} + n*n*cte_{2}$
+
+$\Rightarrow O(n^{2})$
+
+</td>
+</tr>
+<tr>
+<td>
+ 
+```java
+int [] a = new int [n];
+int [] s = new int [n];
+for ( int i =1; i<= n ; i++ )
+    s[i] = 0;
+for ( int i =1; i<= n ; i++) {
+    for (int j =1; j<= i ; j++)
+        s[i] += a[j];
+}
+```
+
+</td>
+<td>
+
+$T(n)= cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3} = $
+
+$= cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i = ....$
+
+$\Rightarrow O(n^{2})$
+
+</td>
+</tr>
+<tr>
+<td>
+ 
+```java
+int x= 0;
+int i = 1;
+while ( i <= n) {
+    x = x + 1;
+    i = i + 2;
+} 
+```
+
+</td>
+<td>
+
+$T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$
+
+$\Rightarrow O(n)$
+
+</td>
+</tr>
+<tr>
+<td>
+ 
+```java
+int x= 1;
+while (x < n)
+    x = 2 *x;
+```
+
+</td>
+<td>
+
+$T(n) = cte_{1}+cte_{2}*log(n)$
+
+$\Rightarrow O(log(n))$
+
+</td>
+</tr>
+</table>
+
+```
+Aclaración:
+Si n es potencia de 2: realiza log(n) iteraciones
+Si n no es potencia de 2: realiza log(n) + 1 iteraciones
+```
 
 
 
