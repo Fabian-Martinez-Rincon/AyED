@@ -133,6 +133,8 @@ $$\Rightarrow O(n^{2})$$
 <table >
 <td>
 
+<div>
+
 ```java
 int [] a = new int [n];
 int [] s = new int [n];
@@ -143,12 +145,14 @@ for ( int i =1; i<= n ; i++) {
         s[i] += a[j];
 }
 ```
+</div>
+
 </td>
 <td>
 
-$$T(n)= cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3} = $$
+$$T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
 
-$$= cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i = ....$$
+$$=cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i=....$$
 
 $$\Rightarrow O(n^{2})$$
 
