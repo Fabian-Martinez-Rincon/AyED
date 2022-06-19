@@ -1,5 +1,3 @@
-$$10n^{2}\rightarrow 10*(2n)^{(2)} = 10*4*(n^{(2)})$$
-
 <h1 align="center">Analisis de Algoritmos</h1>
 
 ### *Indice*
@@ -93,18 +91,14 @@ aumenta:……….?
 
 - a.- El doble   
 
-$$ n\rightarrow 2*n$$
+- $$ n\rightarrow 2*n$$
 
 - b.- El triple  
 
-
-
-
+- $$10n^{2}\to 10*(2n)^{2} = 10*4*(n^{2})$$
 
 
 ## Cálculo_del_Tiempo_de_Ejecución
-
-$$10n^{2}\rightarrow 10*(2n)^{(2)}=10*4*(n^{(2)})$$
 
 ### FOR
 
