@@ -19,6 +19,7 @@
   - [Practica de Repaso ](/Documentos/Java_Practica4.md)
 - [Parciales Objetos](/Documentos/ParcialesObjetos.md)
 
+
 </td>
 <td>
  
@@ -27,10 +28,11 @@
 - [Practica 2](/Documentos/Practica2.md)
 - [Practica 3](/Documentos/Practica3.md)
 - [Practica 4](/Documentos/Practica4.md)
-- [Practica Teorica Abb]()
-- [Practica Teorica Heap]()
+
 
 **Segundo Parcial**
+
+- [Teoria2]()
 - [Practica 5]()
 
 </td>
