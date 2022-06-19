@@ -104,9 +104,19 @@ $$ = 40+(n)^{2}$$
 
 ### FOR
 
-## Ejemplo 1
+#### Ejemplo 1
  
-<table align="right">
+<table >
+
+<td>
+
+$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
+
+$$ = cte_{1}+(n)*(n)*cte_{2}$$
+
+$$ \Rightarrow O(n^{2})$$
+
+</td>
 <td>
 
 ```java
@@ -118,21 +128,23 @@ for (int i =1; i<= n ; i++) {
 }
 ```
 </td>
+</table>
 
-</table >
 
-$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
+#### Ejemplo 2
 
-$$ = cte_{1}+(n)*(n)*cte_{2}$$
+<table >
 
-$$ \Rightarrow O(n^{2})$$
-
-## Ejemplo 2
-
-<table align="right">
 <td>
 
-<div>
+$$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
+
+$$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
+ 
+$$ \Rightarrow O(n^{2})$$
+
+</td>
+<td>
 
 ```java
 int [] a = new int [n];
@@ -144,23 +156,24 @@ for ( int i =1; i<= n ; i++) {
         s[i] += a[j];
 }
 ```
-</div>
-
 </td>
 </table>
 
-$$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
 
-$$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
- 
-$$ \Rightarrow O(n^{2})$$
 
 
 ### WHILE
 
-## Ejemplo 1
+#### Ejemplo 1
  
-<table align="right">
+<table >
+
+<td>
+
+$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
+
+$$ \Rightarrow O(n)$$
+</td>
 <td>
 
 ```java
@@ -172,18 +185,18 @@ while ( i <= n) {
 } 
 ```
 </td>
-
 </table >
 
-$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
 
-$$ \Rightarrow O(n)$$
-
-<br>
-
-## Ejemplo 2
+#### Ejemplo 2
  
-<table align="right">
+<table >
+<td>
+
+$$ T(n) = cte_{1}+cte_{2}*log(n)$$
+
+$$ \Rightarrow O(log(n))$$
+</td>
 <td>
 
 ```java
@@ -195,15 +208,6 @@ while (x < n)
 </table >
 
 
-$$ T(n) = cte_{1}+cte_{2}*log(n)$$
-
-$$ \Rightarrow O(log(n))$$
-
-<br>
-<br>
-
----
-<br></br>
 
 ```
 Aclaración:
