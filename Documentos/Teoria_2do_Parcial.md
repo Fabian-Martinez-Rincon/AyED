@@ -132,7 +132,7 @@ $$ \Rightarrow O(n^{2})$$
 </td>
 </table>
 
-<h2></h2>
+<br>
 
 #### Ejemplo 2
 
@@ -166,7 +166,7 @@ $$ \Rightarrow O(n^{2})$$
 </table>
 
 
-<h2></h2>
+<br>
 
 ### WHILE
 
@@ -207,10 +207,11 @@ $$ \Rightarrow O(n)$$
 
 
 
-<h2></h2>
-
+<br>
 <div>
 
+<br>
+ 
 #### Ejemplo 2
  
 <table align="left">
@@ -237,7 +238,9 @@ $$ \Rightarrow O(log(n))$$
 </div>
 
 
-<h2></h2>
+<br>
+<br>
+<br>
 
 ```
 Aclaración:
