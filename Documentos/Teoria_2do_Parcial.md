@@ -104,7 +104,7 @@ $$10n^{2} \rightarrow 10*(2n)^{2} = 10*4*n^{2}$$
 
 #### Ejemplo 1
  
-<table align = "left">
+<table >
 <td>
 
 ```java
@@ -116,18 +116,22 @@ for (int i =1; i<= n ; i++) {
 }
 ```
 </td>
+<td>
+
+$$T(n) = cte_{1} + \sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
+
+$$= cte_{1} + n*n*cte_{2}$$
+
+$$\Rightarrow O(n^{2})$$
+
+</td>
 </table>
 
 
-$T(n) = cte_{1} + \sum_{i=1}^{n}\sum_{j=1}^{n}cte_{2}=$
-
-$= cte_{1} + n*n*cte_{2}$
-
-$\Rightarrow O(n^{2})$
-
----
-
 #### Ejemplo 2
+
+<table >
+<td>
 
 ```java
 int [] a = new int [n];
@@ -139,18 +143,28 @@ for ( int i =1; i<= n ; i++) {
         s[i] += a[j];
 }
 ```
+</td>
+<td>
+
+$$T(n)= cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3} = $$
+
+$$= cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i = ....$$
+
+$$\Rightarrow O(n^{2})$$
+
+</td>
+</table >
 
 
-$T(n)= cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3} = $
 
-$= cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i = ....$
-
-$\Rightarrow O(n^{2})$
 
 ### WHILE
 
 #### Ejemplo 1
  
+<table >
+<td>
+
 ```java
 int x= 0;
 int i = 1;
@@ -159,25 +173,35 @@ while ( i <= n) {
     i = i + 2;
 } 
 ```
+</td>
+<td>
 
+$$T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
 
-$T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$
+$$\Rightarrow O(n)$$
+</td>
+</table >
 
-$\Rightarrow O(n)$
 
 #### Ejemplo 2
  
+<table >
+<td>
+
 ```java
 int x= 1;
 while (x < n)
     x = 2 *x;
 ```
+</td>
 
+<td>
 
+$$T(n) = cte_{1}+cte_{2}*log(n)$$
 
-$T(n) = cte_{1}+cte_{2}*log(n)$
-
-$\Rightarrow O(log(n))$
+$$\Rightarrow O(log(n))$$
+</td>
+</table >
 
 
 
