@@ -106,17 +106,7 @@ $$ = 40+(n)^{2}$$
 
 #### Ejemplo 1
  
-<table >
-
-<td>
-
-$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
-
-$$ = cte_{1}+(n)*(n)*cte_{2}$$
-
-$$ \Rightarrow O(n^{2})$$
-
-</td>
+<table align="left">
 <td>
 
 ```java
@@ -128,22 +118,25 @@ for (int i =1; i<= n ; i++) {
 }
 ```
 </td>
-</table>
-
-
-#### Ejemplo 2
+</table >
 
 <table >
-
 <td>
 
-$$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
+$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
 
-$$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
- 
+$$ = cte_{1}+(n)*(n)*cte_{2}$$
+
 $$ \Rightarrow O(n^{2})$$
 
 </td>
+</table>
+
+<h2></h2>
+
+#### Ejemplo 2
+
+<table align="left">
 <td>
 
 ```java
@@ -158,22 +151,33 @@ for ( int i =1; i<= n ; i++) {
 ```
 </td>
 </table>
-
-
-
-
-### WHILE
-
-#### Ejemplo 1
- 
 <table >
 
 <td>
 
-$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
+$$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
 
-$$ \Rightarrow O(n)$$
+$$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
+ 
+$$ \Rightarrow O(n^{2})$$
+
 </td>
+
+</table>
+
+
+<h2></h2>
+
+### WHILE
+
+
+
+
+#### Ejemplo 1
+
+<div>
+
+<table align="left">
 <td>
 
 ```java
@@ -185,18 +189,31 @@ while ( i <= n) {
 } 
 ```
 </td>
+</table align="right">
+
+<table >
+
+<td>
+
+$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
+
+$$ \Rightarrow O(n)$$
+</td>
+
 </table >
 
 
+</div>
+
+
+
+<h2></h2>
+
+<div>
+
 #### Ejemplo 2
  
-<table >
-<td>
-
-$$ T(n) = cte_{1}+cte_{2}*log(n)$$
-
-$$ \Rightarrow O(log(n))$$
-</td>
+<table align="left">
 <td>
 
 ```java
@@ -205,9 +222,22 @@ while (x < n)
     x = 2 *x;
 ```
 </td>
+
+</table >
+<table>
+<td>
+
+$$ T(n) = cte_{1}+cte_{2}*log(n)$$
+
+$$ \Rightarrow O(log(n))$$
+</td>
+
 </table >
 
+</div>
 
+
+<h2></h2>
 
 ```
 Aclaración:
