@@ -100,13 +100,13 @@ $$10n^{2} \rightarrow 10*(2n)^{2} = 10*4*n^{2}$$
 ## Cálculo_del_Tiempo_de_Ejecución
 
 
-<table>
-<tr>
-<td> Estructuras </td> <td> Tiempo </td>
-</tr>
-<tr>
-<td>
+### FOR
+
+#### Ejemplo 1
  
+<table align = "left">
+<td>
+
 ```java
 int sum = 0;
 int [] a = new int [n][n];
@@ -115,9 +115,9 @@ for (int i =1; i<= n ; i++) {
         sum += a[i][j];
 }
 ```
-
 </td>
-<td>
+</table>
+
 
 $T(n) = cte_{1} + \sum_{i=1}^{n}\sum_{j=1}^{n}cte_{2}=$
 
@@ -125,11 +125,10 @@ $= cte_{1} + n*n*cte_{2}$
 
 $\Rightarrow O(n^{2})$
 
-</td>
-</tr>
-<tr>
-<td>
- 
+---
+
+#### Ejemplo 2
+
 ```java
 int [] a = new int [n];
 int [] s = new int [n];
@@ -141,8 +140,6 @@ for ( int i =1; i<= n ; i++) {
 }
 ```
 
-</td>
-<td>
 
 $T(n)= cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3} = $
 
@@ -150,10 +147,9 @@ $= cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i = ....$
 
 $\Rightarrow O(n^{2})$
 
-</td>
-</tr>
-<tr>
-<td>
+### WHILE
+
+#### Ejemplo 1
  
 ```java
 int x= 0;
@@ -164,17 +160,12 @@ while ( i <= n) {
 } 
 ```
 
-</td>
-<td>
 
 $T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$
 
 $\Rightarrow O(n)$
 
-</td>
-</tr>
-<tr>
-<td>
+#### Ejemplo 2
  
 ```java
 int x= 1;
@@ -182,16 +173,13 @@ while (x < n)
     x = 2 *x;
 ```
 
-</td>
-<td>
+
 
 $T(n) = cte_{1}+cte_{2}*log(n)$
 
 $\Rightarrow O(log(n))$
 
-</td>
-</tr>
-</table>
+
 
 ```
 Aclaración:
