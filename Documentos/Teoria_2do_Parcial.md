@@ -40,5 +40,4 @@ $$(n) = cte_{1}+\sum_{i=1}^{(n+1)/2} = cte_{1}+ cte_{2}/2 * (n+1) = 0(n)$$
 
 
 
-
 - [En donde pude procesar las formulas](https://www.codecogs.com/eqnedit.php)
