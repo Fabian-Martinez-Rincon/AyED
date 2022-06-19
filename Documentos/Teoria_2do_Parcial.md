@@ -26,16 +26,86 @@ ejecución.
 
 ### `Ejemplo`
 
-supongamos que un algoritmo, que corre con una entrada de tamaño n, tarda `6n2+100n+300` instrucciones de máquina. El término `6n2` se vuelve más grande que el resto de los términos, `100n+300` una vez que n se hace suficientemente grande, 20 en este caso
+Supongamos que un algoritmo, que corre con una entrada de tamaño n, tarda `6n2+100n+300` instrucciones de máquina. El término `6n2` se vuelve más grande que el resto de los términos, `100n+300` una vez que n se hace suficientemente grande, 20 en este caso
 
 Gráfica que muestra los valores de `6n2` y de `100n+300` para valores de n de 0 a 100:
 
 
 
-<img src="./Img2/2.png" align="left" >
+<img src="./Img2/2.png" align="center" >
 
-$$(n) = cte_{1}+\sum_{i=1}^{(n+1)/2} = cte_{1}+ cte_{2}/2 * (n+1) = 0(n)$$
 
+Al descartar los términos menos significativos y los coeficientes constantes, podemos enfocarnos en la parte importante del tiempo de ejecución de un algoritmo, su tasa o velocidad de crecimiento, sin involucrarnos en detalles que complican nuestro entendimiento.
+
+Cuando descartamos los coeficientes constantes y los
+términos menos significativos, usamos notación
+asintótica.
+
+### Problema
+
+Considerando que un algoritmo requiere f(n) operaciones para resolver un problema y la computadora procesa 100 operaciones por segundo.
+
+
+Si f(n) es:
+
+
+
+<table>
+<tr>
+<td> a. log10 n </td> <td> b. √n </td>
+</tr>
+<tr>
+<td>
+ 
+
+$$f(n) = log_{10}n\rightarrow 4 op$$
+
+$$100op \rightarrow 1seg$$
+
+$$4op \rightarrow \frac{4}{100} = 0.04seg $$
+
+</td>
+<td>
+
+$f(b) = \sqrt{n} \rightarrow  100op$
+
+$100op \rightarrow 1seg$
+
+$100op \rightarrow \frac{100}{100} = 1seg$
+
+
+ 
+</td>
+</tr>
+ 
+</table>
+
+Determine el tiempo en segundos requerido por el
+algoritmo para resolver un problema de tamaño n=10000.
+
+### Problema
+
+Suponga que Ud. tiene un algoritmo ALGO-1 con un tiempo de ejecución exacto de 10n2. ¿En cuánto se hace más lento ALGO-1 cuando el tamaño de la entrada n
+aumenta:……….?
+
+- a.- El doble   
+$$n\rightarrow 2*n$$
+
+- b.- El triple
+
+$$10n^{2} \rightarrow 10*(2n)^{2} = 10*4*n^{2}$$
+
+
+
+
+
+
+
+
+---
+$$T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}$$
+$$ = cte_{1}+ cte_{2}/2 * (n+1) $$
+$$= 0(n)$$
 
 
 
