@@ -96,16 +96,17 @@ $$ n\rightarrow 2*n$$
 - b.- El triple  
 
 $$10n^{2}\to 10*(2n)^{2}$$
-$$ = 10*4*(n^{2})$$
+
+$$ = 40+(n)^{2}$$
 
 
 ## Cálculo_del_Tiempo_de_Ejecución
 
 ### FOR
 
-#### Ejemplo 1
+## Ejemplo 1
  
-<table >
+<table align="right">
 <td>
 
 ```java
@@ -117,21 +118,18 @@ for (int i =1; i<= n ; i++) {
 }
 ```
 </td>
-<td>
+
+</table >
 
 $$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
 
-$$ =cte_{1}+n*n*cte_{2}$$
+$$ = cte_{1}+(n)*(n)*cte_{2}$$
 
 $$ \Rightarrow O(n^{2})$$
 
-</td>
-</table>
+## Ejemplo 2
 
-
-#### Ejemplo 2
-
-<table >
+<table align="right">
 <td>
 
 <div>
@@ -149,7 +147,7 @@ for ( int i =1; i<= n ; i++) {
 </div>
 
 </td>
-<td>
+</table>
 
 $$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
 
@@ -158,18 +156,11 @@ $$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
 $$ \Rightarrow O(n^{2})$$
 
 
- 
-</td>
-</table>
-
-
-
-
 ### WHILE
 
-#### Ejemplo 1
+## Ejemplo 1
  
-<table >
+<table align="right">
 <td>
 
 ```java
@@ -181,18 +172,18 @@ while ( i <= n) {
 } 
 ```
 </td>
-<td>
+
+</table >
 
 $$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
 
 $$ \Rightarrow O(n)$$
-</td>
-</table >
 
+<br>
 
-#### Ejemplo 2
+## Ejemplo 2
  
-<table >
+<table align="right">
 <td>
 
 ```java
@@ -201,16 +192,18 @@ while (x < n)
     x = 2 *x;
 ```
 </td>
+</table >
 
-<td>
 
 $$ T(n) = cte_{1}+cte_{2}*log(n)$$
 
 $$ \Rightarrow O(log(n))$$
-</td>
-</table >
 
+<br>
+<br>
 
+---
+<br></br>
 
 ```
 Aclaración:
