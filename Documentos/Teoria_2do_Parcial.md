@@ -30,12 +30,15 @@ supongamos que un algoritmo, que corre con una entrada de tamaño n, tarda `6n2+
 
 Gráfica que muestra los valores de `6n2` y de `100n+300` para valores de n de 0 a 100:
 
-![](/Documentos/Img2/2.png)
 
 
-$$(n) = cte_{1}+\sum_{i=1}^{(n+1)/2} 
+<img src="./Img2/2.png" align="left" width="335 " height="215">
 
-= cte_{1}+ cte_{2}/2 * (n+1) = 0(n)$$
+$$(n) = cte_{1}+\sum_{i=1}^{(n+1)/2} = cte_{1}+ cte_{2}/2 * (n+1) = 0(n)$$
+
+
+
+
 
 
 - [En donde pude procesar las formulas](https://www.codecogs.com/eqnedit.php)
