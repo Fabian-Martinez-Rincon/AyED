@@ -1,3 +1,5 @@
+$$10n^{2}\rightarrow 10*(2n)^{(2)} = 10*4*(n^{(2)})$$
+
 <h1 align="center">Analisis de Algoritmos</h1>
 
 ### *Indice*
@@ -59,20 +61,20 @@ Si f(n) es:
 <td>
  
 
-$$f(n) = log_{10}n\rightarrow 4 op$$
+$$ f(n) = log_{10}n\rightarrow 4 op$$
 
-$$100op \rightarrow 1seg$$
+$$ 100op \rightarrow 1seg$$
 
-$$4op \rightarrow \frac{4}{100} = 0.04seg $$
+$$ 4op \rightarrow \frac{4}{100} = 0.04seg $$
 
 </td>
 <td>
 
-$f(b) = \sqrt{n} \rightarrow  100op$
+$$f(b) = \sqrt{n} \rightarrow  100op$$
 
-$100op \rightarrow 1seg$
+$$ 100op \rightarrow 1seg$$
 
-$100op \rightarrow \frac{100}{100} = 1seg$
+$$ 100op \rightarrow \frac{100}{100} = 1seg$$
 
 
  
@@ -90,15 +92,19 @@ Suponga que Ud. tiene un algoritmo ALGO-1 con un tiempo de ejecución exacto de 
 aumenta:……….?
 
 - a.- El doble   
-$$n\rightarrow 2*n$$
 
-- b.- El triple
-$$10n^{2} \rightarrow 10*(2n)^{2} = 10*4*n^{2}$$
+$$ n\rightarrow 2*n$$
 
----
+- b.- El triple  
+
+
+
+
+
 
 ## Cálculo_del_Tiempo_de_Ejecución
 
+$$10n^{2}\rightarrow 10*(2n)^{(2)}=10*4*(n^{(2)})$$
 
 ### FOR
 
@@ -118,11 +124,11 @@ for (int i =1; i<= n ; i++) {
 </td>
 <td>
 
-$$T(n) = cte_{1} + \sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
+$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
 
-$$= cte_{1} + n*n*cte_{2}$$
+$$ =cte_{1}+n*n*cte_{2}$$
 
-$$\Rightarrow O(n^{2})$$
+$$ \Rightarrow O(n^{2})$$
 
 </td>
 </table>
@@ -150,14 +156,16 @@ for ( int i =1; i<= n ; i++) {
 </td>
 <td>
 
-$$T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
+$$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
 
-$$=cte_{1}+n*cte_{2}+cte_{3}*\sum_{i=1}^{n}i=....$$
+$$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
+ 
+$$ \Rightarrow O(n^{2})$$
 
-$$\Rightarrow O(n^{2})$$
 
+ 
 </td>
-</table >
+</table>
 
 
 
@@ -180,9 +188,9 @@ while ( i <= n) {
 </td>
 <td>
 
-$$T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
+$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
 
-$$\Rightarrow O(n)$$
+$$ \Rightarrow O(n)$$
 </td>
 </table >
 
@@ -201,9 +209,9 @@ while (x < n)
 
 <td>
 
-$$T(n) = cte_{1}+cte_{2}*log(n)$$
+$$ T(n) = cte_{1}+cte_{2}*log(n)$$
 
-$$\Rightarrow O(log(n))$$
+$$ \Rightarrow O(log(n))$$
 </td>
 </table >
 
@@ -218,9 +226,9 @@ Si n no es potencia de 2: realiza log(n) + 1 iteraciones
 
 
 ---
-$$T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}$$
+$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}$$
 $$ = cte_{1}+ cte_{2}/2 * (n+1) $$
-$$= 0(n)$$
+$$ = 0(n)$$
 
 
 
