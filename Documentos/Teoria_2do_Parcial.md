@@ -4,6 +4,10 @@
 
 - [Introducción al concepto T(n)](#Introducción_al_concepto_T(n))
 - [Cálculo del T(n)](#Cálculo_del_Tiempo_de_Ejecución)
+- [Problema 1](#Problema_1)
+- [Problema 2](#Problema_2)
+- [Problema 3](#Problema_3)
+- [Problema 4](#Problema_4)
 
 ### Introducción
 
@@ -42,7 +46,7 @@ Cuando descartamos los coeficientes constantes y los
 términos menos significativos, usamos notación
 asintótica.
 
-### Problema
+### Problema_1
 
 Considerando que un algoritmo requiere f(n) operaciones para resolver un problema y la computadora procesa 100 operaciones por segundo.
 
@@ -84,29 +88,50 @@ $$ 100op \rightarrow \frac{100}{100} = 1seg$$
 Determine el tiempo en segundos requerido por el
 algoritmo para resolver un problema de tamaño n=10000.
 
-### Problema
+### Problema_2
 
 Suponga que Ud. tiene un algoritmo ALGO-1 con un tiempo de ejecución exacto de 10n2. ¿En cuánto se hace más lento ALGO-1 cuando el tamaño de la entrada n
 aumenta:……….?
 
-- a.- El doble   
-
-$$ n\rightarrow 2*n$$
-
-- b.- El triple  
+- a. El doble   
 
 $$10n^{2}\to 10*(2n)^{2}$$
 
-$$ = 40+(n)^{2}$$
+$$ = 10*(4n)^{2}$$
+
+- b. El triple  
+
+$$10n^{2}\to 10*(3n)^{2}$$
+
+$$ = 10*(9n)^{2}$$
 
 
 ## Cálculo_del_Tiempo_de_Ejecución
 
-### FOR
 
-#### Ejemplo 1
- 
-<table align="left">
+<table>
+<td>Programa</td>
+<td>Resolución</td>
+<tr>
+<td>
+
+```java
+int sum = 0;
+int [] a = new int [n];
+for (int i =1; i<= n ; i++ )
+    sum += a[i];
+```
+</td>
+<td>
+
+$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}cte_{2}=$$
+$$ = cte_{1}+(n)*cte_{2}$$
+$$ \Rightarrow O(n)$$
+
+</td>
+</tr>
+
+<tr>
 <td>
 
 ```java
@@ -117,26 +142,18 @@ for (int i =1; i<= n ; i++) {
         sum += a[i][j];
 }
 ```
-</td>
-</table >
 
-<table >
+</td>
 <td>
 
 $$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
-
 $$ = cte_{1}+(n)*(n)*cte_{2}$$
-
 $$ \Rightarrow O(n^{2})$$
 
 </td>
-</table>
+</tr>
 
-<h2></h2>
-
-#### Ejemplo 2
-
-<table align="left">
+<tr>
 <td>
 
 ```java
@@ -149,33 +166,18 @@ for ( int i =1; i<= n ; i++) {
         s[i] += a[j];
 }
 ```
-</td>
-</table>
-<table >
 
+</td>
 <td>
 
 $$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
-
 $$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
- 
 $$ \Rightarrow O(n^{2})$$
 
 </td>
+</tr>
 
-</table>
-
-
-<h2></h2>
-
-### WHILE
-
-
-#### Ejemplo 1
-
-<div>
-
-<table align="left">
+<tr>
 <td>
 
 ```java
@@ -186,34 +188,18 @@ while ( i <= n) {
     i = i + 2;
 } 
 ```
+
 </td>
-</table align="right">
-
-<table >
-
 <td>
 
 $$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
-
+$$ cte_{1}+cte_{2}/2 * (n+1)$$
 $$ \Rightarrow O(n)$$
+
 </td>
+</tr>
 
-</table >
-
-
-</div>
-
-
-
-
-
-<div>
-
-<h2></h2>
-
-#### Ejemplo 2
- 
-<table align="left">
+<tr>
 <td>
 
 ```java
@@ -221,23 +207,18 @@ int x= 1;
 while (x < n)
     x = 2 *x;
 ```
-</td>
 
-</table >
-<table>
+</td>
 <td>
 
 $$ T(n) = cte_{1}+cte_{2}*log(n)$$
 
 $$ \Rightarrow O(log(n))$$
+
 </td>
+</tr>
+</table>
 
-</table >
-
-</div>
-
-
-<h2></h2>
 
 ```
 Aclaración:
@@ -245,14 +226,78 @@ Si n es potencia de 2: realiza log(n) iteraciones
 Si n no es potencia de 2: realiza log(n) + 1 iteraciones
 ```
 
+### Problema_3 
+
+¿Cuál es la expresión correcta respecto al tiempo de ejecución del siguiente segmento de código?
+
+<table>
+
+<td>
+
+```Java
+for (i = 0; i < n; i++)
+    for (j = 1; j < n; j+=n/2)
+        x = x + 1;
+
+// El primer for es lineal y el segundo es logaritmico.
+// El segundo for es constante porque no depende 
+// de los datos de entrada
+//El segundo for se trata como constante
+```
 
 
----
-$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}$$
-$$ = cte_{1}+ cte_{2}/2 * (n+1) $$
-$$ = 0(n)$$
 
-e
+</td>
+<td>
 
 
-- [En donde pude procesar las formulas](https://www.codecogs.com/eqnedit.php)
+$$ \sum_{i=0}^{n} \sum_{j=1}^{(n*2)}cte_1$$
+$$ O(n)$$
+
+</td>
+</table>
+
+
+### Problema_4
+
+Nota: Es cuadratico cuando tengo dos bucles lineales anidados
+
+Considere el siguiente fragmento de código:
+
+<table>
+<td>
+
+```Java
+int count = 0;
+int N = a.length;
+for (int i = 0; i < N; i++)
+    for (int j = 0; j < N; j++)
+        a[j]++;
+```
+</td>
+
+<td>
+
+$$ cte_{1} + \sum_{i=0}^{N}\sum_{j=0}^{N} cte_{2} \to O(N^{2})$$
+
+
+
+$$N = 3500 \to 1seg $$
+
+$$ (3500^{2}) \to 1seg $$
+
+`N` es el tamaño de la entrada
+
+
+
+$$ (35000^{2}) \to 100seg $$
+
+
+
+</td>
+
+</table>
+
+Suponga que tarda 1 seg cuando N=3500,
+¿cuánto tardará aproximadamente para N=35000? Justifique su
+respuesta.
