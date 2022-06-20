@@ -171,14 +171,21 @@ for (int i =1; i<= n ; i++ )
 ```
 </td>
 <td>
+ 
  Resolucion
  
  
-$$ T(n) = cte_{1} + \sum_{i=1}^{(n)} cte_{2} = $$
- 
-$$ = cte_{1} + (n) * cte_{2} $$
+$$ 
+T(n) = cte_{1} + \sum_{i = 1}^{(n)} cte_{2} = 
+$$
 
-$$  \Rightarrow O(n) $$
+$$
+= cte_{1} + (n) * cte_{2} 
+$$
+
+$$
+\Rightarrow O(n)
+$$
 
 </td>
 </tr>
@@ -198,9 +205,17 @@ for (int i =1; i<= n ; i++) {
 </td>
 <td>
 
-$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}\sum_{j=1}^{n}cte_{2}=$$
-$$ = cte_{1}+(n)*(n)*cte_{2}$$
-$$ \Rightarrow O(n^{2})$$
+$$ 
+T(n) = cte_{1} + \sum_{i = 1}^{(n)} \sum_{j = 1}^{n} cte_{2}=
+$$
+ 
+$$
+= cte_{1} + (n) * (n) * cte_{2} 
+$$
+ 
+$$
+\Rightarrow O(n ^ {2})
+$$
 
 </td>
 </tr>
@@ -222,9 +237,17 @@ for ( int i =1; i<= n ; i++) {
 </td>
 <td>
 
-$$ T(n)=cte_{1}+\sum_{i=1}^{n}cte_{2}+ \sum_{i=1}^{n} \sum_{j=1}^{i}cte_{3}=$$
-$$ = cte_{1}+n*cte_{2}+cte_{3} * \sum_{i=1}^{(n)} i=$$
-$$ \Rightarrow O(n^{2})$$
+$$
+T(n) = cte_{1} + \sum_{i = 1}^{n} cte_{2} + \sum_{i = 1}^{n} \sum_{j = 1} ^ {i} cte_{3} = 
+$$
+
+$$ 
+= cte_{1} + n * cte_{2} + cte_{3} * \sum_{i = 1}^{(n)} i = 
+$$
+ 
+$$
+\Rightarrow O(n^{2})
+$$
 
 </td>
 </tr>
@@ -244,9 +267,17 @@ while ( i <= n) {
 </td>
 <td>
 
-$$ T(n) = cte_{1}+\sum_{i=1}^{(n+1)/2}cte_{2}$$
-$$ cte_{1}+cte_{2}/2 * (n+1)$$
-$$ \Rightarrow O(n)$$
+$$ 
+T(n) = cte_{1} + \sum_{i = 1} ^ {(n + 1)/2} cte_{2}
+$$
+
+$$
+cte_{1} + cte_{2} / 2 * (n + 1)
+$$
+ 
+$$
+\Rightarrow O(n)
+$$
 
 </td>
 </tr>
@@ -263,9 +294,13 @@ while (x < n)
 </td>
 <td>
 
-$$ T(n) = cte_{1}+cte_{2}*log(n)$$
+$$ 
+T(n) = cte_{1} + cte_{2} * log(n) 
+$$
 
-$$ \Rightarrow O(log(n))$$
+$$
+\Rightarrow O(log ( n ))
+$$
 
 </td>
 </tr>
