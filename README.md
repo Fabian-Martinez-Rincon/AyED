@@ -496,7 +496,9 @@ O(n)
 <table >
 <td>
 <table >
+<tr></tr>
 <td>
+
 
 ```Java
 public static int factorial( int n ) {
