@@ -155,7 +155,7 @@ $$ = 10*(9n)^{2}$$
 
 
 <table>
-<td>Programa</td>
+<td>Programa(1..5)</td>
 <td>Resolución</td>
 <tr>
 <td>
@@ -165,6 +165,7 @@ int sum = 0;
 int [] a = new int [n];
 for (int i =1; i<= n ; i++ )
     sum += a[i];
+//12345
 ```
 </td>
 <td>
@@ -381,15 +382,15 @@ public boolean esImpar(int unNumero){
 
 $$ T(n) = $$
 
-$$\sum_{i=1}^{n}cte_{1}+\sum_{i=1}^{n[paso 2 ]}(\sum_{j=2*i-1}^{n}cte_{2} + \sum_{j=1}^{2*i}cte_{2})$$
+$$ \sum_{i=1}^{n}cte_{1} + \sum_{i=1}^{n[paso 2 ]} (\sum_{j=(2*i)-1}^{n} cte_{2} + \sum_{j=1}^{2*i} cte_{2})$$
 
-$$\sum_{i=1}^{n}cte_{1}+\sum_{i=1}^{2/n}(\sum_{j=2*i-1}^{n}cte_{2} + \sum_{j=1}^{2*i}cte_{2})$$
+$$ \sum_{i=1}^{n} cte_{1}+\sum_{i=1}^{2/n}(\sum_{j=(2*i)-1}^{n} cte_{2} + \sum_{j=1}^{2*i} cte_{2})$$
 
-$$cte_{1}*n+ \sum_{i=1}^{n/2}cte_{2}* (n-2*i+1+1+2*i-1+1)$$
+$$ cte_{1} * n + \sum_{i=1}^{n/2} cte_{2}* (n-(2*i)+1+1+(2*i)-1+1)$$
 
-$$cte_{1}*n + cte_{2}*(n+2)*n/2$$
+$$ cte_{1} * n + cte_{2}*(n+2)*n/2$$
 
-$$cte_{1}*n + cte_{2}/2*(n^2)+cte_{2}*n$$
+$$ cte_{1} * n + cte_{2}/2*(n^2) + cte_{2}*n$$
 
 $$\to O(n^2)$$
 
@@ -402,3 +403,25 @@ $$\to O(n^2)$$
 $$T_{esImpar}(n) = cte_{1}$$
 
 - El metodo `imparesypares` tiene un loop en el que : cada iteración se llama al metodo `esImpar` y la mitad de las veces se ejecuta uno de los for (para valores de `i`) y la mitad restante el otro for (para valores de `i` pares)
+
+
+### Ejercicio
+
+<table>
+<td>
+
+```Java
+private int ejercicio3(int n) {
+  int p=0; int j=1;
+  for (int i=1; i<=n; i++)
+    if (esImpar(i))
+      j:=j*2;
+    else
+      for (int k=1; k<=j; k++)
+        p:= p+1;
+  return p;
+}
+
+```
+</td>
+</table>
