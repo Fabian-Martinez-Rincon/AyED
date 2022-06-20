@@ -421,7 +421,69 @@ private int ejercicio3(int n) {
         p:= p+1;
   return p;
 }
-
+public boolean esImpar(int unNumero){
+if (unNumero%2 != 0)
+  return true;
+else
+  return false;
+}
 ```
 </td>
+<td>
+
+La mitad de las veces hace algo constante, la otra mitad hace una sumatoria
+
+$$ n = 6$$
+
+$$ T(n) = \sum_{i=1}^{n} cte_{1} + \sum_{i=1}^{n/2} cte_{2} + \sum_{i=1}^{n/2} \sum_{j=1}^{2^{i}} 1 $$
+
+$$  cte_{1} * n + cte_{2} * \frac{n}{2} + \sum_{i=1}^{n/2} 2^{i} $$
+
+$$  cte_{1} * n + cte_{2} * \frac{n}{2} + 2^{\frac{n}{2} + 1} - 1 - 1$$
+
+El ultimo -1 es porque la sumatoria empieza en 1
+
+$$ \to O(2^{n})$$
+
+</td>
+</table>
+
+
+### Ejercicio
+
+<table>
+
+<td>
+
+```Java
+
+i = 0; j =0;
+while(i<1000)
+  for( int k = i; k <= n; k++ ) {
+    i++;
+    j++; }
+for( int p = 0; p < n*n; p++ )
+  for( int q = 0; q < p; q++ )
+    j-;
+
+```
+
+</td>
+
+<td>
+
+¿Con qué valor termina la viariable i?
+
+- `Rta` Con n + 1
+
+Porque la condicion dentro del for no se cumpliria cuando K lo supere
+
+Si no queremos que quede en un loop infinito, el n tendria que ser 999
+
+¿Cuántas veces se ejecuta la sentencia 3?
+
+O(n)
+
+</td>
+
 </table>
