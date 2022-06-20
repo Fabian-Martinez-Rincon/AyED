@@ -493,8 +493,9 @@ O(n)
 
 ## Algoritmos_Recursivos
 
-<table>
-
+<table >
+<td>
+<table >
 <td>
 
 ```Java
@@ -506,6 +507,9 @@ public static int factorial( int n ) {
 }
 
 ```
+</td>
+</td>
+<td>
 
 $$
 T(n) \begin{cases}
