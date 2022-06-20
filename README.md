@@ -594,6 +594,8 @@ O(n)
 
 ## Algoritmos_Recursivos
 
+### Ejemplo 1
+
 <table >
 <td>
 <table >
@@ -610,8 +612,13 @@ public static int factorial( int n ) {
 }
 
 ```
+
+
 </td>
 </table>
+
+Termina cuando n-i = 1
+
 </td>
 
 <td>
@@ -619,8 +626,42 @@ public static int factorial( int n ) {
 $$
 T(n) \begin{cases}
  & cte_{1} \to n= 1\\
- & cte_{2} + T(n-1) \to n>1 
+ & T(n-1) + cte_{2}  \to n>1 
 \end{cases}
 $$
+
+Paso 1
+
+$$
+T(n) = T(n-1) + cte_{2} = (T(n - 2) + cte_{2}) + cte_{2}
+$$
+
+Paso 2
+
+$$
+T(n) = T(n-2) + 2cte_{2} = (T(n - 3) + cte_{2}) + 2cte_{2}
+$$
+
+Paso i
+
+$$
+T(n) = T(n - i) + i * cte_{2}
+$$
+
+$$
+T(n) = T(1) + (n-1) * cte_{2}
+$$
+
+$$
+T(n) = cte_{1} + (n-1) * cte_{2}
+$$
+
+Es lineal
+(Todos los algoritmos recursivos se resuelven de la misma manera)
+
+
 </td>
 </table>
+
+### Ejemplo 2
+
