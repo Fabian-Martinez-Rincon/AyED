@@ -294,6 +294,7 @@ $$ (35000^{2}) \to 100seg $$
 
 
 
+
 </td>
 
 </table>
@@ -301,3 +302,60 @@ $$ (35000^{2}) \to 100seg $$
 Suponga que tarda 1 seg cuando N=3500,
 ¿cuánto tardará aproximadamente para N=35000? Justifique su
 respuesta.
+
+
+### Ejemplo
+
+<table>
+
+<td>
+
+```Java
+private void imparesypares(int n){
+    int x=0; int y=0;
+    for (int i=1;i<=n;i++)
+        if (esImpar(i))
+            for (int j=i;j<=n;j++)
+                x++;
+        else
+            for (int j=1;j<=i;j++)
+                y++;
+}
+```
+
+```Java
+public boolean esImpar(int unNumero){
+    if (unNumero%2 != 0)
+        return true;
+    else
+        return false;
+}
+```
+</td>
+<td>
+
+$$ T(n) = $$
+
+$$\sum_{i=1}^{n}cte_{1}+\sum_{i=1}^{n[paso 2 ]}(\sum_{j=2*i-1}^{n}cte_{2} + \sum_{j=1}^{2*i}cte_{2})$$
+
+$$\sum_{i=1}^{n}cte_{1}+\sum_{i=1}^{2/n}(\sum_{j=2*i-1}^{n}cte_{2} + \sum_{j=1}^{2*i}cte_{2})$$
+
+$$cte_{1}*n+ \sum_{i=1}^{n/2}cte_{2}* (n-2*i+1+1+2*i-1+1)$$
+
+$$cte_{1}*n + cte_{2}*(n+2)*n/2$$
+
+$$cte_{1}*n + cte_{2}/2*(n^2)+cte_{2}*n$$
+
+$$\to O(n^2)$$
+
+</td>
+
+</table>
+
+- El metodo `esImpar` tiene todas las sentencias constantes
+
+$$T_{esImpar}(n) = cte_{1}$$
+
+- El metodo `imparesypares` tiene un loop en el que : cada iteración se llama al metodo `esImpar` y la mitad de las veces se ejecuta uno de los for (para valores de `i`) y la mitad restante el otro for (para valores de `i` pares)
+
+
