@@ -280,6 +280,9 @@ Si n no es potencia de 2: realiza log(n) + 1 iteraciones
 <table>
 
 <td>
+<table >
+<tr></tr>
+<td>
 
 ```Java
 for (i = 0; i < n; i++)
@@ -292,7 +295,8 @@ for (i = 0; i < n; i++)
 //El segundo for se trata como constante
 ```
 
-
+</td>
+</table>
 
 </td>
 <td>
@@ -313,6 +317,9 @@ Considere el siguiente fragmento de código:
 
 <table>
 <td>
+<table >
+<tr></tr>
+<td>
 
 ```Java
 int count = 0;
@@ -321,6 +328,9 @@ for (int i = 0; i < N; i++)
     for (int j = 0; j < N; j++)
         a[j]++;
 ```
+
+</td>
+</table>
 </td>
 
 <td>
@@ -356,6 +366,9 @@ respuesta.
 <table>
 
 <td>
+<table >
+<tr></tr>
+<td>
 
 ```Java
 private void imparesypares(int n){
@@ -378,6 +391,9 @@ public boolean esImpar(int unNumero){
         return false;
 }
 ```
+</td>
+</table>
+
 </td>
 <td>
 
@@ -410,6 +426,9 @@ $$T_{esImpar}(n) = cte_{1}$$
 
 <table>
 <td>
+<table >
+<tr></tr>
+<td>
 
 ```Java
 private int ejercicio3(int n) {
@@ -429,6 +448,9 @@ else
   return false;
 }
 ```
+</td>
+</table>
+
 </td>
 <td>
 
