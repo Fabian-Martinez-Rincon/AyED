@@ -107,11 +107,12 @@ Si f(n) es:
 </tr>
 <tr>
 <td>
- 
 
-$$ f(n) = log_{10}n\rightarrow 4 op$$
 
-$$ 100op \rightarrow 1seg$$
+
+$$ f(n) = log_{10}n\rightarrow 4 op $$
+
+$$ 100op \rightarrow 1seg $$
 
 $$ 4op \rightarrow \frac{4}{100} = 0.04seg $$
 
@@ -170,10 +171,14 @@ for (int i =1; i<= n ; i++ )
 ```
 </td>
 <td>
+ Resolucion
+ 
+ 
+$$ T(n) = cte_{1} + \sum_{i=1}^{(n)} cte_{2} = $$
+ 
+$$ = cte_{1} + (n) * cte_{2} $$
 
-$$ T(n)=cte_{1}+\sum_{i=1}^{(n)}cte_{2}=$$
-$$ = cte_{1}+(n)*cte_{2}$$
-$$ \Rightarrow O(n)$$
+$$  \Rightarrow O(n) $$
 
 </td>
 </tr>
@@ -302,8 +307,13 @@ for (i = 0; i < n; i++)
 <td>
 
 
-$$ \sum_{i=0}^{n} \sum_{j=1}^{(n*2)}cte_1$$
-$$ O(n)$$
+$$ 
+\sum_{i = 0}^{n} \sum_{j = 1}^{(n * 2)} cte_1
+$$
+
+$$ 
+O(n)
+$$
 
 </td>
 </table>
@@ -335,19 +345,27 @@ for (int i = 0; i < N; i++)
 
 <td>
 
-$$ cte_{1} + \sum_{i=0}^{N}\sum_{j=0}^{N} cte_{2} \to O(N^{2})$$
+$$
+cte_{1} + \sum_{i = 0}^{N} \sum_{j = 0}^{N} cte_{2} \to O(N ^ {2})
+$$
 
 
 
-$$N = 3500 \to 1seg $$
+$$
+N = 3500 \to 1seg 
+$$
 
-$$ (3500^{2}) \to 1seg $$
+$$ 
+(3500^{2}) \to 1seg 
+$$
 
 `N` es el tamaño de la entrada
 
 
 
-$$ (35000^{2}) \to 100seg $$
+$$ 
+(35000^{2}) \to 100seg 
+$$
 
 
 
@@ -397,19 +415,33 @@ public boolean esImpar(int unNumero){
 </td>
 <td>
 
-$$ T(n) = $$
+$$ 
+ T(n) = 
+$$
 
-$$ \sum_{i=1}^{n}cte_{1} + \sum_{i=1}^{n[paso 2 ]} (\sum_{j=(2*i)-1}^{n} cte_{2} + \sum_{j=1}^{2*i} cte_{2})$$
+$$ 
+\sum_{i=1}^{n}cte_{1} + \sum_{i=1}^{n[paso 2 ]} (\sum_{j=(2*i)-1}^{n} cte_{2} + \sum_{j=1}^{2*i} cte_{2})
+$$
 
-$$ \sum_{i=1}^{n} cte_{1}+\sum_{i=1}^{2/n}(\sum_{j=(2*i)-1}^{n} cte_{2} + \sum_{j=1}^{2*i} cte_{2})$$
+$$ 
+\sum_{i=1}^{n} cte_{1} + \sum_{i=1}^{2/n} (\sum_{j=(2*i)-1}^{n} cte_{2} + \sum_{j=1}^{2*i} cte_{2})
+$$
 
-$$ cte_{1} * n + \sum_{i=1}^{n/2} cte_{2}* (n-(2*i)+1+1+(2*i)-1+1)$$
+$$ 
+cte_{1} * n + \sum_{i=1}^{n/2} cte_{2} * (n-(2 * i) + 1 + 1 + ( 2 * i ) - 1 + 1)
+$$
 
-$$ cte_{1} * n + cte_{2}*(n+2)*n/2$$
+$$ 
+cte_{1} * n + cte_{2} * (n+2)*n/2
+$$
 
-$$ cte_{1} * n + cte_{2}/2*(n^2) + cte_{2}*n$$
+$$ 
+cte_{1} * n + cte_{2}/2*(n^2) + cte_{2} * n
+$$
 
-$$\to O(n^2)$$
+$$
+\to O(n^2)
+$$
 
 </td>
 
@@ -456,17 +488,29 @@ else
 
 La mitad de las veces hace algo constante, la otra mitad hace una sumatoria
 
-$$ n = 6$$
+El ultimo -1 es porque la sumatoria empieza en 1
 
-$$ T(n) = \sum_{i=1}^{n} cte_{1} + \sum_{i=1}^{n/2} cte_{2} + \sum_{i=1}^{n/2} \sum_{j=1}^{2^{i}} 1 $$
+$$
+n = 6
+$$
 
-$$  cte_{1} * n + cte_{2} * \frac{n}{2} + \sum_{i=1}^{n/2} 2^{i} $$
+$$
+T(n) = \sum_{i=1}^{n} cte_{1} + \sum_{i=1}^{n/2} cte_{2} + \sum_{i=1}^{n/2} \sum_{j=1}^{2^{i}} 1 
+$$
 
-$$  cte_{1} * n + cte_{2} * \frac{n}{2} + 2^{\frac{n}{2} + 1} - 1 - 1$$
+$$
+cte_{1} * n + cte_{2} * \frac{n}{2} + \sum_{i=1}^{n/2} 2^{i}
+$$
+
+$$
+cte_{1} * n + cte_{2} * \frac{n}{2} + 2^{\frac{n}{2} + 1} - 1 - 1
+$$
 
 El ultimo -1 es porque la sumatoria empieza en 1
 
-$$ \to O(2^{n})$$
+$$
+ \to O(2^{n})
+ $$
 
 </td>
 </table>
