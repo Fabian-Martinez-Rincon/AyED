@@ -665,3 +665,86 @@ Es lineal
 
 ### Ejemplo 2
 
+Encontrar el máximo elemento en un arreglo de
+enteros tomando n posiciones a partir de la
+posición i
+
+<table>
+<td>
+
+```Java
+/** Calcula el Máximo en un arreglo. */
+public static int max( int [] a, int i, int n ) {
+  int m1; int m2;
+  if (n == 1)
+    return a[i];
+  else { 
+    m1 = max (a, i, n/2);
+    m2 = max (a, i + (n/2), n/2);
+    if (m1<m2)
+      return m2;
+    else 
+      return m1;
+       }
+  }
+```
+</td>
+<td>
+
+$$
+T(n) \begin{cases}
+ & cte_{1} \to n= 1\\
+ & 2 * T(n/2) + cte_{2}  \to n>1 
+\end{cases}
+$$
+
+$$
+T(n) =
+$$
+
+$$
+ 2 * T(n/2) + cte_{2} = 2 * [2 * T(n/4) + cte_{2}] + cte_{2} 
+$$
+
+$$
+4 * T(n/4) + 3 cte_{2} = 4 * [2 * T(n/8) + cte_{2}] + 3 cte_{2} 
+$$
+
+$$
+ 8 * T(n/8) + 7 cte_{2} = 8 * [2 * T(n/16) + cte_{2}] + 7 cte_{2} 
+$$
+
+$$
+ 2^{i} * T(n/2^{i}) + (2^{i} - 1) *  cte_{2} 
+$$
+
+Buscamos el corte 
+
+$$
+  n/2^{i} = 1
+$$
+
+$$
+  n = 2^{i}
+$$
+
+$$
+  i = log_{2} n
+$$
+
+Remplazamos
+
+$$
+T(n) = n * T(n/n) + (n - 1) * cte_{2}
+$$
+
+$$
+ n * cte_{1} + (n - 1) * cte_{2}
+$$
+
+$$
+ O(n)
+$$
+
+</td>
+</table>
