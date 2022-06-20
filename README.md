@@ -508,7 +508,9 @@ public static int factorial( int n ) {
 
 ```
 </td>
+</table>
 </td>
+
 <td>
 
 $$
