@@ -53,6 +53,7 @@
 - [Problema 2](#Problema_2)
 - [Problema 3](#Problema_3)
 - [Problema 4](#Problema_4)
+- [Algoritmos Recursivos](#Algoritmos_Recursivos)
 
 ### Introducción
 
@@ -486,4 +487,31 @@ O(n)
 
 </td>
 
+</table>
+
+---
+
+## Algoritmos_Recursivos
+
+<table>
+
+<td>
+
+```Java
+public static int factorial( int n ) {
+  if (n == 1)
+    return 1;
+  else 
+    return n * factorial( n - 1 );
+}
+
+```
+
+$$
+T(n) \begin{cases}
+ & cte_{1} \to n= 1\\
+ & cte_{2} + T(n-1) \to n>1 
+\end{cases}
+$$
+</td>
 </table>
