@@ -739,12 +739,15 @@ T(n) = n * T(n/n) + (n - 1) * cte_{2}
 $$
 
 $$
- n * cte_{1} + (n - 1) * cte_{2}
+n * cte_{1} + (n - 1) * cte_{2}
 $$
 
 $$
- O(n)
+O(n)
 $$
 
 </td>
 </table>
+
+## Notación Big_Oh
+
