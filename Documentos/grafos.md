@@ -123,3 +123,41 @@ public crearCamino(Grafo<String> grafo, String origen, String destino){
     recorrido.eliminar(vertice.dato());
 } 
 ```
+
+
+---
+
+```Java
+public crearCamino(Grafo<String> grafo, String origen, String destino){
+    boolean [] marcas = new boolean [grafo.listaAdyacentes().tamanio()+1];
+    ListaGenerica<String> resultado = ListaEnlazadaGenerica<String>();
+    ListaGenerica<Vertice<String>> vertices = grafo.listaAdyacentes();
+    Vertice<String> vertice = vertices.proximo();
+    vertices.comenzar();
+    while (!vertices.fin() && !vertice.dato().equals(origen)){
+        vertice = vertices.proximo();
+    }
+    if (vertice != null) {
+        this.dfs(grafo,vertice,destino,marcas,resultado,ListaEnlazadaGenerica<String>);
+    }
+    return resultado;
+}
+
+private dfs(Grafo<String> grafo,Vertice<String> vertice,String destino,Boolean [] marcas,ListaGenerica<String> resultado,ListaGenerica<String> recorrido){
+    recorrido.agregarAlFinal(vertice);
+    if (!vertice.dato().equals(destino)) {
+        resultado = recorrido.clonar();
+    }
+    else{
+        marcas[vertice.posicion()] = true;
+        ListaGenerica<Vertice<String>> adyacentes = grafo.listaAdyacentes(vertice);
+        adyacentes.comenzar();
+        while(!adyacentes.fin() && resultado.esVacia()){
+            Vertice<String> vDestino = adyacentes.proximo().verticeDestino();
+            dfs(grafo,vDestino,destino,marcas,resultado,recorrido);
+        } 
+        marcas[vertice.posicion()] = false;
+    }
+    recorrido.eliminar(vertice.dato());
+}
+```
