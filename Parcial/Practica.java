@@ -91,7 +91,7 @@ private void dfsMenorPeso(Grafo<String> grafo, Vertice<String> v, String destino
         while !adyacentes.fin() {
             Arista<String> a = adyacentes.proximo();
             Vertice<String> u = a.verticeDestino();
-            int pesoActual = pesoAcumulado + u.peso();
+            int pesoActual = pesoAcumulado + a.peso();
             if (!marcas[u.posicion()] && pesoActual<min.peso){
                 dfs(grafo,u,destino,marcas,actual,min,pesoActual);
             } 
@@ -125,4 +125,8 @@ private Boolean dfsPesoLimite(Grafo<String>grafo, Vertice<String> v, String dest
         resultado.eliminarEn(v.tamanio());
     }
     return llega;
+}
+
+private void bfs(Grafo<String>grafo){
+
 }
