@@ -4,12 +4,6 @@
 
 
 
-<div align='center'>
-
-<img  src="https://media.giphy.com/media/9LZTcawH3mc8V2oUqk/giphy.gif" >
-
-</div>
-
 <img src= 'https://i.gifer.com/origin/8c/8cd3f1898255c045143e1da97fbabf10_w200.gif' height="20" width="100%">
  
 - [Resumen Teorico](https://inakilapeyre.notion.site/inakilapeyre/Algoritmos-y-Estructuras-de-datos-f27e3754fcae465484fe3c1ee6cc6c4f)
