@@ -1,5 +1,5 @@
 <h1 align="center"><img src="https://media.giphy.com/media/hO8uTzEOefFh3Yv5gm/giphy.gif" height="38" /> Algoritmos y Estructuras de Datos </a>
- <img style="transform:scaleX(-1);" src="https://media.giphy.com/media/hO8uTzEOefFh3Yv5gm/giphy.gif" height="38" /></h1>
+</h1>
 
 
 
