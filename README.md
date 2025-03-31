@@ -14,7 +14,7 @@
 ---
 
 
-<a title="" href="https://youtu.be/bmZWGumOblE?si=04DkbL0kB4j_2csN"><img src="/Documentos/image.png" alt="" /></a>
+<a title="" href="https://youtu.be/bmZWGumOblE?si=04DkbL0kB4j_2csN"><img src="/Documentos/image.png" width="550px" /></a>
 
 </div>
 
